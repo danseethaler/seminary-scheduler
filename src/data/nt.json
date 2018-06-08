@@ -1,0 +1,962 @@
+[
+  {
+    "title": "Introduction to the New Testament",
+    "lesson": 1,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/lessons-1-5/lesson-1-introduction-to-the-new-testament?lang=eng"
+  },
+  {
+    "title": "The Plan of Salvation",
+    "lesson": 2,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/lessons-1-5/lesson-2-the-plan-of-salvation?lang=eng"
+  },
+  {
+    "title": "The Role of the Learner",
+    "lesson": 3,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/lessons-1-5/lesson-3-the-role-of-the-learner?lang=eng"
+  },
+  {
+    "title": "Studying the Scriptures",
+    "lesson": 4,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/lessons-1-5/lesson-4-studying-the-scriptures?lang=eng"
+  },
+  {
+    "title": "Context and Overview of the New Testament",
+    "lesson": 5,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/lessons-1-5/lesson-5-context-and-overview-of-the-new-testament?lang=eng"
+  },
+  {
+    "title": "Matthew 1–2",
+    "lesson": 6,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-6-matthew-1-2?lang=eng"
+  },
+  {
+    "title": "Matthew 3",
+    "lesson": 7,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-7-matthew-3?lang=eng"
+  },
+  {
+    "title": "Matthew 4",
+    "lesson": 8,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-8-matthew-4?lang=eng"
+  },
+  {
+    "title": "Matthew 5:1–16",
+    "lesson": 9,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-9-matthew-5-1-16?lang=eng"
+  },
+  {
+    "title": "Matthew 5:17–48",
+    "lesson": 10,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-10-matthew-5-17-48?lang=eng"
+  },
+  {
+    "title": "Matthew 6",
+    "lesson": 11,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-11-matthew-6?lang=eng"
+  },
+  {
+    "title": "Matthew 7",
+    "lesson": 12,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-12-matthew-7?lang=eng"
+  },
+  {
+    "title": "Matthew 8–10",
+    "lesson": 13,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-13-matthew-8-10?lang=eng"
+  },
+  {
+    "title": "Matthew 11–12",
+    "lesson": 14,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-14-matthew-11-12?lang=eng"
+  },
+  {
+    "title": "Matthew 13:1–23",
+    "lesson": 15,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-15-matthew-13-1-23?lang=eng"
+  },
+  {
+    "title": "Matthew 13:24–58",
+    "lesson": 16,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-16-matthew-13-24-58?lang=eng"
+  },
+  {
+    "title": "Matthew 14",
+    "lesson": 17,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-17-matthew-14?lang=eng"
+  },
+  {
+    "title": "Matthew 15",
+    "lesson": 18,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-18-matthew-15?lang=eng"
+  },
+  {
+    "title": "Matthew 16",
+    "lesson": 19,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-19-matthew-16?lang=eng"
+  },
+  {
+    "title": "Matthew 17",
+    "lesson": 20,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-20-matthew-17?lang=eng"
+  },
+  {
+    "title": "Matthew 18",
+    "lesson": 21,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-21-matthew-18?lang=eng"
+  },
+  {
+    "title": "Matthew 19–20",
+    "lesson": 22,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-22-matthew-19-20?lang=eng"
+  },
+  {
+    "title": "Matthew 21:1–16",
+    "lesson": 23,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-23-matthew-21-1-16?lang=eng"
+  },
+  {
+    "title": "Matthew 21:17–22:14",
+    "lesson": 24,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-24-matthew-21-17-22-14?lang=eng"
+  },
+  {
+    "title": "Matthew 22:15–46",
+    "lesson": 25,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-25-matthew-22-15-46?lang=eng"
+  },
+  {
+    "title": "Matthew 23",
+    "lesson": 26,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-26-matthew-23?lang=eng"
+  },
+  {
+    "title": "Joseph Smith—Matthew; Matthew 24",
+    "lesson": 27,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-27-joseph-smith-matthew-matthew-24?lang=eng"
+  },
+  {
+    "title": "Matthew 25:1–13",
+    "lesson": 28,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-28-matthew-25-1-13?lang=eng"
+  },
+  {
+    "title": "Matthew 25:14–46",
+    "lesson": 29,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-29-matthew-25-14-46?lang=eng"
+  },
+  {
+    "title": "Matthew 26:1–30",
+    "lesson": 30,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-30-matthew-26-1-30?lang=eng"
+  },
+  {
+    "title": "Matthew 26:31–75",
+    "lesson": 31,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-31-matthew-26-31-75?lang=eng"
+  },
+  {
+    "title": "Matthew 27:1–50",
+    "lesson": 32,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-32-matthew-27-1-50?lang=eng"
+  },
+  {
+    "title": "Matthew 27:51–28:20",
+    "lesson": 33,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/matthew/lesson-33-matthew-27-51-28-20?lang=eng"
+  },
+  {
+    "title": "Mark 1",
+    "lesson": 34,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-34-mark-1?lang=eng"
+  },
+  {
+    "title": "Mark 2–3",
+    "lesson": 35,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-35-mark-2-3?lang=eng"
+  },
+  {
+    "title": "Mark 4–5",
+    "lesson": 36,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-36-mark-4-5?lang=eng"
+  },
+  {
+    "title": "Mark 6",
+    "lesson": 37,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-37-mark-6?lang=eng"
+  },
+  {
+    "title": "Mark 7–8",
+    "lesson": 38,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-38-mark-7-8?lang=eng"
+  },
+  {
+    "title": "Mark 9:1–29",
+    "lesson": 39,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-39-mark-9-1-29?lang=eng"
+  },
+  {
+    "title": "Mark 9:30–50",
+    "lesson": 40,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-40-mark-9-30-50?lang=eng"
+  },
+  {
+    "title": "Mark 10",
+    "lesson": 41,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-41-mark-10?lang=eng"
+  },
+  {
+    "title": "Mark 11–16",
+    "lesson": 42,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-mark/lesson-42-mark-11-16?lang=eng"
+  },
+  {
+    "title": "Luke 1",
+    "lesson": 43,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-43-luke-1?lang=eng"
+  },
+  {
+    "title": "Luke 2",
+    "lesson": 44,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-44-luke-2?lang=eng"
+  },
+  {
+    "title": "Luke 3–4",
+    "lesson": 45,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-45-luke-3-4?lang=eng"
+  },
+  {
+    "title": "Luke 5",
+    "lesson": 46,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-46-luke-5?lang=eng"
+  },
+  {
+    "title": "Luke 6:1–7:18",
+    "lesson": 47,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-47-luke-6-1-7-18?lang=eng"
+  },
+  {
+    "title": "Luke 7:18–50",
+    "lesson": 48,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-48-luke-7-18-50?lang=eng"
+  },
+  {
+    "title": "Luke 8–9",
+    "lesson": 49,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-49-luke-8-9?lang=eng"
+  },
+  {
+    "title": "Luke 10:1–37",
+    "lesson": 50,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-50-luke-10-1-37?lang=eng"
+  },
+  {
+    "title": "Luke 10:38–Luke 12:59",
+    "lesson": 51,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-51-luke-10-38-luke-12-59?lang=eng"
+  },
+  {
+    "title": "Luke 13–14",
+    "lesson": 52,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-52-luke-13-14?lang=eng"
+  },
+  {
+    "title": "Luke 15",
+    "lesson": 53,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-53-luke-15?lang=eng"
+  },
+  {
+    "title": "Luke 16",
+    "lesson": 54,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-54-luke-16?lang=eng"
+  },
+  {
+    "title": "Luke 17",
+    "lesson": 55,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-55-luke-17?lang=eng"
+  },
+  {
+    "title": "Luke 18–21",
+    "lesson": 56,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-56-luke-18-21?lang=eng"
+  },
+  {
+    "title": "Luke 22",
+    "lesson": 57,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-57-luke-22?lang=eng"
+  },
+  {
+    "title": "Luke 23",
+    "lesson": 58,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-58-luke-23?lang=eng"
+  },
+  {
+    "title": "Luke 24",
+    "lesson": 59,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-luke/lesson-59-luke-24?lang=eng"
+  },
+  {
+    "title": "John 1",
+    "lesson": 60,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-60-john-1?lang=eng"
+  },
+  {
+    "title": "John 2",
+    "lesson": 61,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-61-john-2?lang=eng"
+  },
+  {
+    "title": "John 3",
+    "lesson": 62,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-62-john-3?lang=eng"
+  },
+  {
+    "title": "John 4",
+    "lesson": 63,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-63-john-4?lang=eng"
+  },
+  {
+    "title": "John 5",
+    "lesson": 64,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-64-john-5?lang=eng"
+  },
+  {
+    "title": "John 6",
+    "lesson": 65,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-65-john-6?lang=eng"
+  },
+  {
+    "title": "John 7",
+    "lesson": 66,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-66-john-7?lang=eng"
+  },
+  {
+    "title": "John 8:1–30",
+    "lesson": 67,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-67-john-8-1-30?lang=eng"
+  },
+  {
+    "title": "John 8:31–59",
+    "lesson": 68,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-68-john-8-31-59?lang=eng"
+  },
+  {
+    "title": "John 9",
+    "lesson": 69,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-69-john-9?lang=eng"
+  },
+  {
+    "title": "John 10",
+    "lesson": 70,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-70-john-10?lang=eng"
+  },
+  {
+    "title": "John 11",
+    "lesson": 71,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-71-john-11?lang=eng"
+  },
+  {
+    "title": "John 12",
+    "lesson": 72,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-72-john-12?lang=eng"
+  },
+  {
+    "title": "John 13",
+    "lesson": 73,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-73-john-13?lang=eng"
+  },
+  {
+    "title": "John 14",
+    "lesson": 74,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-74-john-14?lang=eng"
+  },
+  {
+    "title": "John 15",
+    "lesson": 75,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-75-john-15?lang=eng"
+  },
+  {
+    "title": "John 16",
+    "lesson": 76,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-76-john-16?lang=eng"
+  },
+  {
+    "title": "John 17",
+    "lesson": 77,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-77-john-17?lang=eng"
+  },
+  {
+    "title": "John 18–19",
+    "lesson": 78,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-78-john-18-19?lang=eng"
+  },
+  {
+    "title": "John 20",
+    "lesson": 79,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-79-john-20?lang=eng"
+  },
+  {
+    "title": "John 21",
+    "lesson": 80,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-gospel-according-to-st-john/lesson-80-john-21?lang=eng"
+  },
+  {
+    "title": "Acts 1:1–8",
+    "lesson": 81,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-81-acts-1-1-8?lang=eng"
+  },
+  {
+    "title": "Acts 1:9–26",
+    "lesson": 82,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-82-acts-1-9-26?lang=eng"
+  },
+  {
+    "title": "Acts 2",
+    "lesson": 83,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-83-acts-2?lang=eng"
+  },
+  {
+    "title": "Acts 3",
+    "lesson": 84,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-84-acts-3?lang=eng"
+  },
+  {
+    "title": "Acts 4–5",
+    "lesson": 85,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-85-acts-4-5?lang=eng"
+  },
+  {
+    "title": "Acts 6–7",
+    "lesson": 86,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-86-acts-6-7?lang=eng"
+  },
+  {
+    "title": "Acts 8",
+    "lesson": 87,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-87-acts-8?lang=eng"
+  },
+  {
+    "title": "Acts 9",
+    "lesson": 88,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-88-acts-9?lang=eng"
+  },
+  {
+    "title": "Acts 10–11",
+    "lesson": 89,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-89-acts-10-11?lang=eng"
+  },
+  {
+    "title": "Acts 12",
+    "lesson": 90,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-90-acts-12?lang=eng"
+  },
+  {
+    "title": "Acts 13–14",
+    "lesson": 91,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-91-acts-13-14?lang=eng"
+  },
+  {
+    "title": "Acts 15",
+    "lesson": 92,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-92-acts-15?lang=eng"
+  },
+  {
+    "title": "Acts 16",
+    "lesson": 93,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-93-acts-16?lang=eng"
+  },
+  {
+    "title": "Acts 17",
+    "lesson": 94,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-94-acts-17?lang=eng"
+  },
+  {
+    "title": "Acts 18–19",
+    "lesson": 95,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-95-acts-18-19?lang=eng"
+  },
+  {
+    "title": "Acts 20–22",
+    "lesson": 96,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-96-acts-20-22?lang=eng"
+  },
+  {
+    "title": "Acts 23–26",
+    "lesson": 97,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-97-acts-23-26?lang=eng"
+  },
+  {
+    "title": "Acts 27–28",
+    "lesson": 98,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-acts-of-the-apostles/lesson-98-acts-27-28?lang=eng"
+  },
+  {
+    "title": "Romans 1–3",
+    "lesson": 99,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-romans/lesson-99-romans-1-3?lang=eng"
+  },
+  {
+    "title": "Romans 4–7",
+    "lesson": 100,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-romans/lesson-100-romans-4-7?lang=eng"
+  },
+  {
+    "title": "Romans 8–11",
+    "lesson": 101,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-romans/lesson-101-romans-8-11?lang=eng"
+  },
+  {
+    "title": "Romans 12–16",
+    "lesson": 102,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-romans/lesson-102-romans-12-16?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 1–2",
+    "lesson": 103,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-103-1-corinthians-1-2?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 3–4",
+    "lesson": 104,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-104-1-corinthians-3-4?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 5–6",
+    "lesson": 105,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-105-1-corinthians-5-6?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 7–8",
+    "lesson": 106,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-106-1-corinthians-7-8?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 9–10",
+    "lesson": 107,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-107-1-corinthians-9-10?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 11",
+    "lesson": 108,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-108-1-corinthians-11?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 12",
+    "lesson": 109,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-109-1-corinthians-12?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 13–14",
+    "lesson": 110,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-110-1-corinthians-13-14?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 15:1–29",
+    "lesson": 111,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-111-1-corinthians-15-1-29?lang=eng"
+  },
+  {
+    "title": "1 Corinthians 15:30–16:24",
+    "lesson": 112,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-corinthians/lesson-112-1-corinthians-15-30-16-24?lang=eng"
+  },
+  {
+    "title": "2 Corinthians 1–3",
+    "lesson": 113,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-the-corinthians/lesson-113-2-corinthians-1-3?lang=eng"
+  },
+  {
+    "title": "2 Corinthians 4–5",
+    "lesson": 114,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-the-corinthians/lesson-114-2-corinthians-4-5?lang=eng"
+  },
+  {
+    "title": "2 Corinthians 6–7",
+    "lesson": 115,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-the-corinthians/lesson-115-2-corinthians-6-7?lang=eng"
+  },
+  {
+    "title": "2 Corinthians 8–9",
+    "lesson": 116,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-the-corinthians/lesson-116-2-corinthians-8-9?lang=eng"
+  },
+  {
+    "title": "2 Corinthians 10–13",
+    "lesson": 117,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-the-corinthians/lesson-117-2-corinthians-10-13?lang=eng"
+  },
+  {
+    "title": "Galatians 1–4",
+    "lesson": 118,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-galatians/lesson-118-galatians-1-4?lang=eng"
+  },
+  {
+    "title": "Galatians 5–6",
+    "lesson": 119,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-galatians/lesson-119-galatians-5-6?lang=eng"
+  },
+  {
+    "title": "Ephesians 1",
+    "lesson": 120,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-ephesians/lesson-120-ephesians-1?lang=eng"
+  },
+  {
+    "title": "Ephesians 2–3",
+    "lesson": 121,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-ephesians/lesson-121-ephesians-2-3?lang=eng"
+  },
+  {
+    "title": "Ephesians 4",
+    "lesson": 122,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-ephesians/lesson-122-ephesians-4?lang=eng"
+  },
+  {
+    "title": "Ephesians 5–6",
+    "lesson": 123,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-ephesians/lesson-123-ephesians-5-6?lang=eng"
+  },
+  {
+    "title": "Philippians 1–3",
+    "lesson": 124,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-philippians/lesson-124-philippians-1-3?lang=eng"
+  },
+  {
+    "title": "Philippians 4",
+    "lesson": 125,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-philippians/lesson-125-philippians-4?lang=eng"
+  },
+  {
+    "title": "Colossians",
+    "lesson": 126,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-colossians/lesson-126-colossians?lang=eng"
+  },
+  {
+    "title": "1 Thessalonians 1–2",
+    "lesson": 127,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-thessalonians/lesson-127-1-thessalonians-1-2?lang=eng"
+  },
+  {
+    "title": "1 Thessalonians 3–5",
+    "lesson": 128,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-the-thessalonians/lesson-128-1-thessalonians-3-5?lang=eng"
+  },
+  {
+    "title": "2 Thessalonians",
+    "lesson": 129,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-the-thessalonians/lesson-129-2-thessalonians?lang=eng"
+  },
+  {
+    "title": "1 Timothy",
+    "lesson": 130,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-of-paul-to-timothy/lesson-130-1-timothy?lang=eng"
+  },
+  {
+    "title": "2 Timothy 1–2",
+    "lesson": 131,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-timothy/lesson-131-2-timothy-1-2?lang=eng"
+  },
+  {
+    "title": "2 Timothy 3–4",
+    "lesson": 132,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-of-paul-to-timothy/lesson-132-2-timothy-3-4?lang=eng"
+  },
+  {
+    "title": "Titus",
+    "lesson": 133,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-titus/lesson-133-titus?lang=eng"
+  },
+  {
+    "title": "Philemon",
+    "lesson": 134,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-philemon/lesson-134-philemon?lang=eng"
+  },
+  {
+    "title": "Hebrews 1–4",
+    "lesson": 135,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-hebrews/lesson-135-hebrews-1-4?lang=eng"
+  },
+  {
+    "title": "Hebrews 5–6",
+    "lesson": 136,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-hebrews/lesson-136-hebrews-5-6?lang=eng"
+  },
+  {
+    "title": "Hebrews 7–10",
+    "lesson": 137,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-hebrews/lesson-137-hebrews-7-10?lang=eng"
+  },
+  {
+    "title": "Hebrews 11",
+    "lesson": 138,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-hebrews/lesson-138-hebrews-11?lang=eng"
+  },
+  {
+    "title": "Hebrews 12–13",
+    "lesson": 139,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-epistle-of-paul-to-the-hebrews/lesson-139-hebrews-12-13?lang=eng"
+  },
+  {
+    "title": "James 1",
+    "lesson": 140,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-general-epistle-of-james/lesson-140-james-1?lang=eng"
+  },
+  {
+    "title": "James 2",
+    "lesson": 141,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-general-epistle-of-james/lesson-141-james-2?lang=eng"
+  },
+  {
+    "title": "James 3",
+    "lesson": 142,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-general-epistle-of-james/lesson-142-james-3?lang=eng"
+  },
+  {
+    "title": "James 4–5",
+    "lesson": 143,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-general-epistle-of-james/lesson-143-james-4-5?lang=eng"
+  },
+  {
+    "title": "1 Peter 1–2",
+    "lesson": 144,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-general-of-peter/lesson-144-1-peter-1-2?lang=eng"
+  },
+  {
+    "title": "1 Peter 3–5",
+    "lesson": 145,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-general-of-peter/lesson-145-1-peter-3-5?lang=eng"
+  },
+  {
+    "title": "2 Peter 1",
+    "lesson": 146,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-general-of-peter/lesson-146-2-peter-1?lang=eng"
+  },
+  {
+    "title": "2 Peter 2–3",
+    "lesson": 147,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-second-epistle-general-of-peter/lesson-147-2-peter-2-3?lang=eng"
+  },
+  {
+    "title": "1 John",
+    "lesson": 148,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-first-epistle-general-of-john/lesson-148-1-john?lang=eng"
+  },
+  {
+    "title": "2 John–3 John",
+    "lesson": 149,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-third-epistle-of-john/lesson-149-2-john-3-john?lang=eng"
+  },
+  {
+    "title": "Jude",
+    "lesson": 150,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-general-epistle-of-jude/lesson-150-jude?lang=eng"
+  },
+  {
+    "title": "Revelation 1",
+    "lesson": 151,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-151-revelation-1?lang=eng"
+  },
+  {
+    "title": "Revelation 2–3",
+    "lesson": 152,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-152-revelation-2-3?lang=eng"
+  },
+  {
+    "title": "Revelation 4–5",
+    "lesson": 153,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-153-revelation-4-5?lang=eng"
+  },
+  {
+    "title": "Revelation 6–11, Part 1",
+    "lesson": 154,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-154-revelation-6-11-part-1?lang=eng"
+  },
+  {
+    "title": "Revelation 6–11, Part 2",
+    "lesson": 155,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-155-revelation-6-11-part-2?lang=eng"
+  },
+  {
+    "title": "Revelation 12–13",
+    "lesson": 156,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-156-revelation-12-13?lang=eng"
+  },
+  {
+    "title": "Revelation 14–16",
+    "lesson": 157,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-157-revelation-14-16?lang=eng"
+  },
+  {
+    "title": "Revelation 17–19",
+    "lesson": 158,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-158-revelation-17-19?lang=eng"
+  },
+  {
+    "title": "Revelation 20",
+    "lesson": 159,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-159-revelation-20?lang=eng"
+  },
+  {
+    "title": "Revelation 21–22",
+    "lesson": 160,
+    "url":
+      "https://www.lds.org/manual/new-testament-seminary-teacher-manual/introduction-to-the-revelation-of-st-john-the-divine/lesson-160-revelation-21-22?lang=eng"
+  }
+]

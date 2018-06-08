@@ -1,0 +1,962 @@
+[
+  {
+    "title": "Introduction to the Old Testament",
+    "lesson": 1,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/lessons-1-5/lesson-1-introduction-to-the-old-testament?lang=eng"
+  },
+  {
+    "title": "The Plan of Salvation",
+    "lesson": 2,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/lessons-1-5/lesson-2-the-plan-of-salvation?lang=eng"
+  },
+  {
+    "title": "The Role of the Learner",
+    "lesson": 3,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/lessons-1-5/lesson-3-the-role-of-the-learner?lang=eng"
+  },
+  {
+    "title": "Studying the Scriptures",
+    "lesson": 4,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/lessons-1-5/lesson-4-studying-the-scriptures?lang=eng"
+  },
+  {
+    "title": "The Bible",
+    "lesson": 5,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/lessons-1-5/lesson-5-the-bible?lang=eng"
+  },
+  {
+    "title": "Moses 1:1–23",
+    "lesson": 6,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-moses/lesson-6-moses-1-1-23?lang=eng"
+  },
+  {
+    "title": "Moses 1:24–42",
+    "lesson": 7,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-moses/lesson-7-moses-1-24-42?lang=eng"
+  },
+  {
+    "title": "Moses 2 (Genesis 1; Abraham 4)",
+    "lesson": 8,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-8-moses-2-genesis-1-abraham-4?lang=eng"
+  },
+  {
+    "title": "Moses 3 (Genesis 2; Abraham 5)",
+    "lesson": 9,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-9-moses-3-genesis-2-abraham-5?lang=eng"
+  },
+  {
+    "title": "Moses 4 (Genesis 3)",
+    "lesson": 10,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-10-moses-4-genesis-3?lang=eng"
+  },
+  {
+    "title": "Moses 5:1–11",
+    "lesson": 11,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-11-moses-5-1-11?lang=eng"
+  },
+  {
+    "title": "Moses 5:12–59 (Genesis 4)",
+    "lesson": 12,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-12-moses-5-12-59-genesis-4?lang=eng"
+  },
+  {
+    "title": "Moses 6:1–47 (Genesis 5)",
+    "lesson": 13,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-13-moses-6-1-47-genesis-5?lang=eng"
+  },
+  {
+    "title": "Moses 6:48–68",
+    "lesson": 14,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-14-moses-6-48-68?lang=eng"
+  },
+  {
+    "title": "Moses 7",
+    "lesson": 15,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-15-moses-7?lang=eng"
+  },
+  {
+    "title": "Moses 8 (Genesis 6:1–13)",
+    "lesson": 16,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-16-moses-8-genesis-6-1-13?lang=eng"
+  },
+  {
+    "title": "Genesis 6:13–9:29",
+    "lesson": 17,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-17-genesis-6-13-9-29?lang=eng"
+  },
+  {
+    "title": "Genesis 10–11",
+    "lesson": 18,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-genesis/lesson-18-genesis-10-11?lang=eng"
+  },
+  {
+    "title": "Abraham 1",
+    "lesson": 19,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-abraham/lesson-19-abraham-1?lang=eng"
+  },
+  {
+    "title": "Abraham 2; Genesis 12",
+    "lesson": 20,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-abraham/lesson-20-abraham-2-genesis-12?lang=eng"
+  },
+  {
+    "title": "Abraham 3",
+    "lesson": 21,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-abraham/lesson-21-abraham-3?lang=eng"
+  },
+  {
+    "title": "Genesis 13–14",
+    "lesson": 22,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-22-genesis-13-14?lang=eng"
+  },
+  {
+    "title": "Genesis 15–16",
+    "lesson": 23,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-23-genesis-15-16?lang=eng"
+  },
+  {
+    "title": "Genesis 17",
+    "lesson": 24,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-24-genesis-17?lang=eng"
+  },
+  {
+    "title": "Genesis 18",
+    "lesson": 25,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-25-genesis-18?lang=eng"
+  },
+  {
+    "title": "Genesis 19",
+    "lesson": 26,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-26-genesis-19?lang=eng"
+  },
+  {
+    "title": "Genesis 20–21",
+    "lesson": 27,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-27-genesis-20-21?lang=eng"
+  },
+  {
+    "title": "Genesis 22",
+    "lesson": 28,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-28-genesis-22?lang=eng"
+  },
+  {
+    "title": "Genesis 23–24",
+    "lesson": 29,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-29-genesis-23-24?lang=eng"
+  },
+  {
+    "title": "Genesis 25–27",
+    "lesson": 30,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-30-genesis-25-27?lang=eng"
+  },
+  {
+    "title": "Genesis 28–30",
+    "lesson": 31,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-31-genesis-28-30?lang=eng"
+  },
+  {
+    "title": "Genesis 31–32",
+    "lesson": 32,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-32-genesis-31-32?lang=eng"
+  },
+  {
+    "title": "Genesis 33–34",
+    "lesson": 33,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-33-genesis-33-34?lang=eng"
+  },
+  {
+    "title": "Genesis 35–37",
+    "lesson": 34,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-34-genesis-35-37?lang=eng"
+  },
+  {
+    "title": "Genesis 38–39",
+    "lesson": 35,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-35-genesis-38-39?lang=eng"
+  },
+  {
+    "title": "Genesis 40–41",
+    "lesson": 36,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-36-genesis-40-41?lang=eng"
+  },
+  {
+    "title": "Genesis 42–43",
+    "lesson": 37,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-37-genesis-42-43?lang=eng"
+  },
+  {
+    "title": "Genesis 44–46",
+    "lesson": 38,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-38-genesis-44-46?lang=eng"
+  },
+  {
+    "title": "Genesis 47–49",
+    "lesson": 39,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-39-genesis-47-49?lang=eng"
+  },
+  {
+    "title": "Genesis 50",
+    "lesson": 40,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/genesis-continued/lesson-40-genesis-50?lang=eng"
+  },
+  {
+    "title": "Exodus 1–2",
+    "lesson": 41,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-41-exodus-1-2?lang=eng"
+  },
+  {
+    "title": "Exodus 3–4",
+    "lesson": 42,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-42-exodus-3-4?lang=eng"
+  },
+  {
+    "title": "Exodus 5–6",
+    "lesson": 43,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-43-exodus-5-6?lang=eng"
+  },
+  {
+    "title": "Exodus 7–11",
+    "lesson": 44,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-44-exodus-7-11?lang=eng"
+  },
+  {
+    "title": "Exodus 12–13",
+    "lesson": 45,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-45-exodus-12-13?lang=eng"
+  },
+  {
+    "title": "Exodus 14–15",
+    "lesson": 46,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-46-exodus-14-15?lang=eng"
+  },
+  {
+    "title": "Exodus 16:1–17:7",
+    "lesson": 47,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-47-exodus-16-1-17-7?lang=eng"
+  },
+  {
+    "title": "Exodus 17:8–19:25",
+    "lesson": 48,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-48-exodus-17-8-exodus-19?lang=eng"
+  },
+  {
+    "title": "Exodus 20, Part 1",
+    "lesson": 49,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-49-exodus-20-part-1?lang=eng"
+  },
+  {
+    "title": "Exodus 20, Part 2",
+    "lesson": 50,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-50-exodus-20-part-2?lang=eng"
+  },
+  {
+    "title": "Exodus 21–24",
+    "lesson": 51,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-51-exodus-21-24?lang=eng"
+  },
+  {
+    "title": "Exodus 25–27; 30",
+    "lesson": 52,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-52-exodus-25-27-30?lang=eng"
+  },
+  {
+    "title": "Exodus 28–29; 31",
+    "lesson": 53,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-53-exodus-28-29-31?lang=eng"
+  },
+  {
+    "title": "Exodus 32",
+    "lesson": 54,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-54-exodus-32?lang=eng"
+  },
+  {
+    "title": "Exodus 33–34",
+    "lesson": 55,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-55-exodus-33-34?lang=eng"
+  },
+  {
+    "title": "Exodus 35–40",
+    "lesson": 56,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-exodus/lesson-56-exodus-35-40?lang=eng"
+  },
+  {
+    "title": "Leviticus 1–7",
+    "lesson": 57,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-leviticus/lesson-57-leviticus-1-7?lang=eng"
+  },
+  {
+    "title": "Leviticus 8–11",
+    "lesson": 58,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-leviticus/lesson-58-leviticus-8-11?lang=eng"
+  },
+  {
+    "title": "Leviticus 12–18",
+    "lesson": 59,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-leviticus/lesson-59-leviticus-12-18?lang=eng"
+  },
+  {
+    "title": "Leviticus 19–27",
+    "lesson": 60,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-leviticus/lesson-60-leviticus-19-27?lang=eng"
+  },
+  {
+    "title": "Numbers 1–10",
+    "lesson": 61,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-61-numbers-1-10?lang=eng"
+  },
+  {
+    "title": "Numbers 11–12",
+    "lesson": 62,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-62-numbers-11-12?lang=eng"
+  },
+  {
+    "title": "Numbers 13–14",
+    "lesson": 63,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-63-numbers-13-14?lang=eng"
+  },
+  {
+    "title": "Numbers 15–19",
+    "lesson": 64,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-64-numbers-15-19?lang=eng"
+  },
+  {
+    "title": "Numbers 20–21",
+    "lesson": 65,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-65-numbers-20-21?lang=eng"
+  },
+  {
+    "title": "Numbers 22–29",
+    "lesson": 66,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-66-numbers-22-29?lang=eng"
+  },
+  {
+    "title": "Numbers 30–36",
+    "lesson": 67,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-67-numbers-30-36?lang=eng"
+  },
+  {
+    "title": "Deuteronomy 1–13",
+    "lesson": 68,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-deuteronomy/lesson-68-deuteronomy-1-13?lang=eng"
+  },
+  {
+    "title": "Deuteronomy 14–19",
+    "lesson": 69,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-deuteronomy/lesson-69-deuteronomy-14-19?lang=eng"
+  },
+  {
+    "title": "Deuteronomy 20–26",
+    "lesson": 70,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-deuteronomy/lesson-70-deuteronomy-20-26?lang=eng"
+  },
+  {
+    "title": "Deuteronomy 27–34",
+    "lesson": 71,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-deuteronomy/lesson-71-deuteronomy-27-34?lang=eng"
+  },
+  {
+    "title": "Joshua 1–2",
+    "lesson": 72,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-joshua/lesson-72-joshua-1-2?lang=eng"
+  },
+  {
+    "title": "Joshua 3–5",
+    "lesson": 73,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-joshua/lesson-73-joshua-3-5?lang=eng"
+  },
+  {
+    "title": "Joshua 6–10",
+    "lesson": 74,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-joshua/lesson-74-joshua-6-10?lang=eng"
+  },
+  {
+    "title": "Joshua 11–24",
+    "lesson": 75,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-joshua/lesson-75-joshua-11-24?lang=eng"
+  },
+  {
+    "title": "Judges 1–5",
+    "lesson": 76,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-judges/lesson-76-judges-1-5?lang=eng"
+  },
+  {
+    "title": "Judges 6–9",
+    "lesson": 77,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-judges/lesson-77-judges-6-9?lang=eng"
+  },
+  {
+    "title": "Judges 10–21",
+    "lesson": 78,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-judges/lesson-78-judges-10-21?lang=eng"
+  },
+  {
+    "title": "Ruth 1–2",
+    "lesson": 79,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ruth/lesson-79-ruth-1-2?lang=eng"
+  },
+  {
+    "title": "Ruth 3–4",
+    "lesson": 80,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ruth/lesson-80-ruth-3-4?lang=eng"
+  },
+  {
+    "title": "1 Samuel 1–2",
+    "lesson": 81,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-81-1-samuel-1-2?lang=eng"
+  },
+  {
+    "title": "1 Samuel 3",
+    "lesson": 82,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-82-1-samuel-3?lang=eng"
+  },
+  {
+    "title": "1 Samuel 4–8",
+    "lesson": 83,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-83-1-samuel-4-8?lang=eng"
+  },
+  {
+    "title": "1 Samuel 9–11",
+    "lesson": 84,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-84-1-samuel-9-11?lang=eng"
+  },
+  {
+    "title": "1 Samuel 12–15",
+    "lesson": 85,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-85-1-samuel-12-15?lang=eng"
+  },
+  {
+    "title": "1 Samuel 16",
+    "lesson": 86,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-86-1-samuel-16?lang=eng"
+  },
+  {
+    "title": "1 Samuel 17",
+    "lesson": 87,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-87-1-samuel-17?lang=eng"
+  },
+  {
+    "title": "1 Samuel 18–24",
+    "lesson": 88,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-88-1-samuel-18-24?lang=eng"
+  },
+  {
+    "title": "1 Samuel 25–31",
+    "lesson": 89,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-samuel/lesson-89-1-samuel-25-31?lang=eng"
+  },
+  {
+    "title": "2 Samuel 1–10",
+    "lesson": 90,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-samuel/lesson-90-2-samuel-1-10?lang=eng"
+  },
+  {
+    "title": "2 Samuel 11:1–12:9",
+    "lesson": 91,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-samuel/lesson-91-2-samuel-11-1-12-9?lang=eng"
+  },
+  {
+    "title": "2 Samuel 12:10–24:25",
+    "lesson": 92,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-samuel/lesson-92-2-samuel-12-10-24-25?lang=eng"
+  },
+  {
+    "title": "1 Kings 1–10",
+    "lesson": 93,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-kings/lesson-93-1-kings-1-10?lang=eng"
+  },
+  {
+    "title": "1 Kings 11–16",
+    "lesson": 94,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-kings/lesson-94-1-kings-11-16?lang=eng"
+  },
+  {
+    "title": "1 Kings 17",
+    "lesson": 95,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-kings/lesson-95-1-kings-17?lang=eng"
+  },
+  {
+    "title": "1 Kings 18–22",
+    "lesson": 96,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-1-kings/lesson-96-1-kings-18-22?lang=eng"
+  },
+  {
+    "title": "2 Kings 1–4",
+    "lesson": 97,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-kings/lesson-97-2-kings-1-4?lang=eng"
+  },
+  {
+    "title": "2 Kings 5–13",
+    "lesson": 98,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-kings/lesson-98-2-kings-5-13?lang=eng"
+  },
+  {
+    "title": "2 Kings 14–17",
+    "lesson": 99,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-kings/lesson-99-2-kings-14-17?lang=eng"
+  },
+  {
+    "title": "2 Kings 18–20",
+    "lesson": 100,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-kings/lesson-100-2-kings-18-20?lang=eng"
+  },
+  {
+    "title": "2 Kings 21–25",
+    "lesson": 101,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-2-kings/lesson-101-2-kings-21-25?lang=eng"
+  },
+  {
+    "title": "1 Chronicles; 2 Chronicles",
+    "lesson": 102,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-books-of-1-and-2-chronicles/lesson-102-1-and-2-chronicles?lang=eng"
+  },
+  {
+    "title": "Ezra 1–6",
+    "lesson": 103,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezra/lesson-103-ezra-1-6?lang=eng"
+  },
+  {
+    "title": "Ezra 7–10",
+    "lesson": 104,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezra/lesson-104-ezra-7-10?lang=eng"
+  },
+  {
+    "title": "Nehemiah",
+    "lesson": 105,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-nehemiah/lesson-105-nehemiah?lang=eng"
+  },
+  {
+    "title": "Esther",
+    "lesson": 106,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-esther/lesson-106-esther?lang=eng"
+  },
+  {
+    "title": "Job 1–16",
+    "lesson": 107,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-job/lesson-107-job-1-16?lang=eng"
+  },
+  {
+    "title": "Job 17–37",
+    "lesson": 108,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-job/lesson-108-job-17-37?lang=eng"
+  },
+  {
+    "title": "Job 38–42",
+    "lesson": 109,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-job/lesson-109-job-38-42?lang=eng"
+  },
+  {
+    "title": "Psalms, Part 1",
+    "lesson": 110,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-psalms/lesson-110-psalms-part-1?lang=eng"
+  },
+  {
+    "title": "Psalms, Part 2",
+    "lesson": 111,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-psalms/lesson-111-psalms-part-2?lang=eng"
+  },
+  {
+    "title": "Psalms, Part 3",
+    "lesson": 112,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-psalms/lesson-112-psalms-part-3?lang=eng"
+  },
+  {
+    "title": "Proverbs 1–9",
+    "lesson": 113,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-proverbs/lesson-113-proverbs-1-9?lang=eng"
+  },
+  {
+    "title": "Proverbs 10–31",
+    "lesson": 114,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-proverbs/lesson-114-proverbs-10-31?lang=eng"
+  },
+  {
+    "title": "Ecclesiastes; Song of Solomon",
+    "lesson": 115,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-song-of-solomon/lesson-115-ecclesiastes-and-the-song-of-solomon?lang=eng"
+  },
+  {
+    "title": "Isaiah 1–2",
+    "lesson": 116,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-116-isaiah-1-2?lang=eng"
+  },
+  {
+    "title": "Isaiah 3–5",
+    "lesson": 117,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-117-isaiah-3-5?lang=eng"
+  },
+  {
+    "title": "Isaiah 6–9",
+    "lesson": 118,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-118-isaiah-6-9?lang=eng"
+  },
+  {
+    "title": "Isaiah 10–16",
+    "lesson": 119,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-119-isaiah-10-16?lang=eng"
+  },
+  {
+    "title": "Isaiah 17–23",
+    "lesson": 120,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-120-isaiah-17-23?lang=eng"
+  },
+  {
+    "title": "Isaiah 24–28",
+    "lesson": 121,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-121-isaiah-24-28?lang=eng"
+  },
+  {
+    "title": "Isaiah 29",
+    "lesson": 122,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-122-isaiah-29?lang=eng"
+  },
+  {
+    "title": "Isaiah 30–35",
+    "lesson": 123,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-123-isaiah-30-35?lang=eng"
+  },
+  {
+    "title": "Isaiah 36–41",
+    "lesson": 124,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-124-isaiah-36-41?lang=eng"
+  },
+  {
+    "title": "Isaiah 42–47",
+    "lesson": 125,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-125-isaiah-42-47?lang=eng"
+  },
+  {
+    "title": "Isaiah 48–50",
+    "lesson": 126,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-126-isaiah-48-50?lang=eng"
+  },
+  {
+    "title": "Isaiah 51–52",
+    "lesson": 127,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-127-isaiah-51-52?lang=eng"
+  },
+  {
+    "title": "Isaiah 53",
+    "lesson": 128,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-128-isaiah-53?lang=eng"
+  },
+  {
+    "title": "Isaiah 54–57",
+    "lesson": 129,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-129-isaiah-54-57?lang=eng"
+  },
+  {
+    "title": "Isaiah 58",
+    "lesson": 130,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-130-isaiah-58?lang=eng"
+  },
+  {
+    "title": "Isaiah 59–66",
+    "lesson": 131,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-isaiah/lesson-131-isaiah-59-66?lang=eng"
+  },
+  {
+    "title": "Jeremiah 1–6",
+    "lesson": 132,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jeremiah/lesson-132-jeremiah-1-6?lang=eng"
+  },
+  {
+    "title": "Jeremiah 7–16",
+    "lesson": 133,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jeremiah/lesson-133-jeremiah-7-16?lang=eng"
+  },
+  {
+    "title": "Jeremiah 17–29",
+    "lesson": 134,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jeremiah/lesson-134-jeremiah-17-29?lang=eng"
+  },
+  {
+    "title": "Jeremiah 30–33",
+    "lesson": 135,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jeremiah/lesson-135-jeremiah-30-33?lang=eng"
+  },
+  {
+    "title": "Jeremiah 34–41",
+    "lesson": 136,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jeremiah/lesson-136-jeremiah-34-41?lang=eng"
+  },
+  {
+    "title": "Jeremiah 42–52",
+    "lesson": 137,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jeremiah/lesson-137-jeremiah-42-52?lang=eng"
+  },
+  {
+    "title": "Lamentations",
+    "lesson": 138,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-lamentations/lesson-138-lamentations?lang=eng"
+  },
+  {
+    "title": "Ezekiel 1–3",
+    "lesson": 139,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezekiel/lesson-139-ezekiel-1-3?lang=eng"
+  },
+  {
+    "title": "Ezekiel 4–32",
+    "lesson": 140,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezekiel/lesson-140-ezekiel-4-32?lang=eng"
+  },
+  {
+    "title": "Ezekiel 33–36",
+    "lesson": 141,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezekiel/lesson-141-ezekiel-33-36?lang=eng"
+  },
+  {
+    "title": "Ezekiel 37",
+    "lesson": 142,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezekiel/lesson-142-ezekiel-37?lang=eng"
+  },
+  {
+    "title": "Ezekiel 38–48",
+    "lesson": 143,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-ezekiel/lesson-143-ezekiel-38-48?lang=eng"
+  },
+  {
+    "title": "Daniel 1",
+    "lesson": 144,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-daniel/lesson-144-daniel-1?lang=eng"
+  },
+  {
+    "title": "Daniel 2",
+    "lesson": 145,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-daniel/lesson-145-daniel-2?lang=eng"
+  },
+  {
+    "title": "Daniel 3–5",
+    "lesson": 146,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-daniel/lesson-146-daniel-3-5?lang=eng"
+  },
+  {
+    "title": "Daniel 6–12",
+    "lesson": 147,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-daniel/lesson-147-daniel-6-12?lang=eng"
+  },
+  {
+    "title": "Hosea",
+    "lesson": 148,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-hosea/lesson-148-hosea?lang=eng"
+  },
+  {
+    "title": "Joel",
+    "lesson": 149,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-joel/lesson-149-joel?lang=eng"
+  },
+  {
+    "title": "Amos",
+    "lesson": 150,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-amos/lesson-150-amos?lang=eng"
+  },
+  {
+    "title": "Obadiah",
+    "lesson": 151,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-obadiah/lesson-151-obadiah?lang=eng"
+  },
+  {
+    "title": "Jonah",
+    "lesson": 152,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-jonah/lesson-152-jonah?lang=eng"
+  },
+  {
+    "title": "Micah",
+    "lesson": 153,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-micah/lesson-153-micah?lang=eng"
+  },
+  {
+    "title": "Nahum, Habakkuk, Zephaniah",
+    "lesson": 154,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-zephaniah/lesson-154-nahum-habakkuk-zephaniah?lang=eng"
+  },
+  {
+    "title": "Haggai; Zechariah 1–2",
+    "lesson": 155,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-zechariah/lesson-155-haggai-zechariah-1-2?lang=eng"
+  },
+  {
+    "title": "Zechariah 3–8",
+    "lesson": 156,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-zechariah/lesson-156-zechariah-3-8?lang=eng"
+  },
+  {
+    "title": "Zechariah 9–14",
+    "lesson": 157,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-zechariah/lesson-157-zechariah-9-14?lang=eng"
+  },
+  {
+    "title": "Malachi 1–2",
+    "lesson": 158,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-malachi/lesson-158-malachi-1-2?lang=eng"
+  },
+  {
+    "title": "Malachi 3",
+    "lesson": 159,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-malachi/lesson-159-malachi-3?lang=eng"
+  },
+  {
+    "title": "Malachi 4",
+    "lesson": 160,
+    "url":
+      "https://www.lds.org/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-malachi/lesson-160-malachi-4?lang=eng"
+  }
+]

@@ -1,4 +1,5 @@
 import Airtable from 'airtable';
+import moment from 'moment';
 
 Airtable.configure({
   endpointUrl: 'https://api.airtable.com',
@@ -30,5 +31,24 @@ export const insertRecords = (tableName, records) =>
 
     insertRow();
   });
+
+export const setupClassDates = (start, end) => {
+  const dates = [];
+  start = moment(start);
+  end = moment(end);
+
+  while (start <= end) {
+    if (start.format('ddd') !== 'Sat' && start.format('ddd') !== 'Sun') {
+      dates.push({
+        date: start.format('M/D/YYYY'),
+        type: 'class',
+        lessons: 1,
+      });
+    }
+    start = start.add(1, 'days');
+  }
+
+  return insertRecords('dates', dates);
+};
 
 export default base;

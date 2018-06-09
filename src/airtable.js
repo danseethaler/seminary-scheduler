@@ -51,4 +51,19 @@ export const setupClassDates = (start, end) => {
   return insertRecords('dates', dates);
 };
 
-export default base;
+export const getData = table =>
+  new Promise((resolve, reject) => {
+    let rows = [];
+    base(table)
+      .select({view: 'Grid view'})
+      .eachPage(
+        (records, fetchNextPage) => {
+          rows = rows.concat(records);
+          fetchNextPage();
+        },
+        err => {
+          if (err) return reject(err);
+          resolve(rows.map(row => row.fields));
+        }
+      );
+  });

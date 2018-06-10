@@ -63,7 +63,15 @@ export const getData = table =>
         },
         err => {
           if (err) return reject(err);
-          resolve(rows.map(row => row.fields));
+          resolve(rows.map(row => ({id: row.id, ...row.fields})));
         }
       );
   });
+
+export const getAllData = tables =>
+  Promise.all(tables.map(table => getData(table))).then(dataItems =>
+    dataItems.reduce((object, data, i) => {
+      object[tables[i]] = data;
+      return object;
+    }, {})
+  );

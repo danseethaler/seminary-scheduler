@@ -85,34 +85,42 @@ const setupLessons = (dates, lessons) => {
   };
 };
 
+const matchDatesToLessons = ({
+  students,
+  dates,
+  teachers,
+  swaps,
+  substitutes,
+}) => {
+  const assignments = ['Opening Prayer', 'Spritual Thought', 'Closing Prayer'];
+
+  const getNextDevotional = assignment(assignments, students);
+  const getLesson = setupLessons(dates, dac);
+
+  return dates.map(({date, type, lessonCount = 1}, i) => {
+    const devotional = noClassTypes.includes(type) ? null : getNextDevotional();
+
+    const lessons = [];
+    for (let index = 0; index < lessonCount; index++) {
+      const lesson = getLesson(i);
+      if (lesson) lessons.push(lesson);
+    }
+
+    const teacher = getTeacher(date, type, teachers, swaps, substitutes);
+
+    return {date, type, teacher, devotional, lessons};
+  });
+};
+
 let schedule;
 
 export default () =>
   getAllData(tables)
     .then(addReferences)
     .then(transformData)
-    .then(({students, dates, teachers, swaps, substitutes}) => {
-      const assignments = [
-        'Opening Prayer',
-        'Spritual Thought',
-        'Closing Prayer',
-      ];
-
-      const getNextDevotional = assignment(assignments, students);
-      const getLesson = setupLessons(dates, dac);
-
-      return dates.map(({date, type}, i) => {
-        const devotional = noClassTypes.includes(type)
-          ? null
-          : getNextDevotional();
-
-        const lesson = getLesson(i);
-
-        const teacher = getTeacher(date, type, teachers, swaps, substitutes);
-
-        schedule = {date, type, teacher, devotional, ...lesson};
-        return schedule;
-      });
+    .then(matchDatesToLessons)
+    .then(fullSchedule => {
+      schedule = fullSchedule;
     });
 
 export const getSchedule = () => schedule;

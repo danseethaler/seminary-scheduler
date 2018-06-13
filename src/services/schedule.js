@@ -85,6 +85,8 @@ const setupLessons = (dates, lessons) => {
   };
 };
 
+let schedule;
+
 export default () =>
   getAllData(tables)
     .then(addReferences)
@@ -108,6 +110,9 @@ export default () =>
 
         const teacher = getTeacher(date, type, teachers, swaps, substitutes);
 
-        return {date, type, teacher, devotional, ...lesson};
+        schedule = {date, type, teacher, devotional, ...lesson};
+        return schedule;
       });
     });
+
+export const getSchedule = () => schedule;

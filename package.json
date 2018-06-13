@@ -4,15 +4,22 @@
   "private": true,
   "dependencies": {
     "airtable": "0.5.6",
+    "emotion": "9.2.3",
+    "emotion-theming": "9.2.3",
     "moment": "2.22.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-emotion": "9.2.3",
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "9.2.0",
+    "react-app-rewired": "1.5.2"
   }
 }

@@ -1,13 +1,7 @@
+import moment from 'moment';
 import React from 'react';
 import styled from 'react-emotion';
-import moment from 'moment';
-
-const Card = styled.div(({theme}) => ({
-  borderRadius: 5,
-  backgroundColor: 'rgba(255, 255, 255, 0.8)',
-  opacity: 0.99,
-  boxShadow: `0px 40px 160px ${theme.colors.background.shadow}`,
-}));
+import {Card} from './bits';
 
 const CardContent = styled.div(({theme}) => ({
   padding: 20,
@@ -97,17 +91,19 @@ const Lesson = ({title, lesson, url}) => (
   </React.Fragment>
 );
 
-export default ({date, devotional, lessons, teacher, type}) => {
+export default ({finished, date, devotional, lessons, teacher, type}) => {
+  if (finished) return null;
+
   return (
     <Card>
       <CardContent>
-        {lessons.map(lesson => <Lesson {...lesson} />)}
+        {lessons.map(lesson => <Lesson key={lesson.lesson} {...lesson} />)}
         <LessonDate>
           {moment(date).format('MMMM D')} - {teacher}
         </LessonDate>
         <Hr />
         {devotional.map(({assignee, assignment}) => (
-          <React.Fragment>
+          <React.Fragment key={assignment}>
             <Assignment>{assignee}</Assignment>
             <AssignmentSmall>{assignment}</AssignmentSmall>
           </React.Fragment>

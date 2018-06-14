@@ -138,7 +138,36 @@ const sortBy = property => {
   };
 };
 
+const getDayName = date => {
+  const today = moment();
+  const diff = moment(date).diff(today, 'days');
+
+  if (diff < 0) {
+    return 'No classes found';
+  } else if (diff === 0) {
+    return 'Today';
+  } else if (diff === 1) {
+    return 'Tomorrow';
+  } else {
+    return diff + ' Days';
+  }
+
+  return diff;
+};
+
 export const getNextClass = () => {
   const today = moment();
-  return schedule.sort(sortBy('date')).find(({date}) => today <= moment(date));
+  const nextClass = schedule
+    .sort(sortBy('date'))
+    .find(({date}) => today <= moment(date));
+
+  if (!nextClass) {
+    return {
+      dayName: 'No classes found',
+      finished: true,
+    };
+  }
+
+  nextClass.dayName = getDayName(nextClass.date);
+  return nextClass;
 };

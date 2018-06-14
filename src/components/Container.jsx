@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'react-emotion';
 import {getNextClass} from '../services/schedule';
-import Card from './LessonCard';
+import LessonCard from './LessonCard';
+import {Switch, Route} from 'react-router-dom';
+import Schedule from '../pages/schedule';
 
 const Wrapper = styled.div(({theme}) => ({
   paddingLeft: 30,
@@ -27,13 +29,33 @@ const Circle = styled.div(({theme}) => ({
   width: 190,
 }));
 
-const nextSchedule = getNextClass();
+const nextClass = getNextClass();
 
-export default ({children}) => (
+export default ({title, children}) => (
   <Wrapper>
     <Circle />
-    <Title>Today</Title>
-    <Card {...nextSchedule} />
-    {/* {children} */}
+    <Switch>
+      <Route
+        exact
+        path="/"
+        render={() => (
+          <React.Fragment>
+            <Title>{nextClass.dayName}</Title>
+            <LessonCard {...nextClass} />
+          </React.Fragment>
+        )}
+      />
+      <Route
+        exact
+        path="/schedule"
+        render={() => (
+          <React.Fragment>
+            <Title>Schedule</Title>
+            <Schedule />
+          </React.Fragment>
+        )}
+      />
+    </Switch>
+    {children}
   </Wrapper>
 );

@@ -143,7 +143,7 @@ const sortBy = property => {
 };
 
 const getDayName = date => {
-  const today = moment();
+  const today = moment().startOf('day');
   const diff = moment(date).diff(today, 'days');
 
   if (diff < 0) {
@@ -158,10 +158,10 @@ const getDayName = date => {
 };
 
 export const getNextClass = () => {
-  const today = moment();
+  const today = moment().startOf('day');
   const nextClass = schedule
     .sort(sortBy('date'))
-    .find(({date}) => today <= moment(date));
+    .find(({date}) => moment(date).diff(today, 'days') >= 0);
 
   if (!nextClass) {
     return {

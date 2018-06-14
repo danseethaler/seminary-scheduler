@@ -8,20 +8,20 @@ const CardContent = styled.div(({theme}) => ({
 }));
 
 export const LessonNumber = styled.p(({theme, type = 'primary'}) => ({
+  textTransform: 'uppercase',
   letterSpacing: '.1em',
   opacity: 0.7,
   color: theme.colors.text.secondary,
   fontSize: 14,
-  margin: '0 0 10px',
+  margin: '0 0 5px',
 }));
 
 export const LessonTitle = styled.h2(({theme, type = 'primary'}) => ({
-  textTransform: 'uppercase',
   color: '#a5adb7',
-  margin: 0,
+  margin: '0 0 10px',
   fontFamily: "'Roboto', sans-serif",
   fontWeight: 400,
-  fontSize: 16,
+  fontSize: 18,
   letterSpacing: '.1em',
 }));
 
@@ -29,13 +29,13 @@ export const LessonDate = styled.h3(({theme, type = 'primary'}) => ({
   color: theme.colors.text[type],
   fontFamily: "'Lato', sans-serif",
   fontWeight: 600,
-  fontSize: 14,
+  fontSize: 16,
   margin: '20px 0',
   letterSpacing: '.1em',
 }));
 
 export const Assignment = styled.h2(({theme, type = 'primary'}) => ({
-  color: '#959ca5',
+  color: theme.colors.text.primary,
   fontFamily: "'Roboto', sans-serif",
   fontWeight: 400,
   fontSize: '.9em',
@@ -49,7 +49,7 @@ export const AssignmentSmall = styled.p(({theme, type = 'primary'}) => ({
   fontFamily: "'Roboto', sans-serif",
   fontWeight: 400,
   letterSpacing: '.1em',
-  fontSize: '.7em',
+  fontSize: 12,
   marginTop: 0,
 }));
 
@@ -58,7 +58,7 @@ export const ButtonText = styled.span(({theme, type = 'primary'}) => ({
   color: '#ef0b18',
   fontFamily: "'Roboto', sans-serif",
   fontWeight: 500,
-  fontSize: '1.3em',
+  fontSize: 18,
   letterSpacing: '.1em',
   opacity: 0.7,
 }));
@@ -72,6 +72,7 @@ const CardButton = styled.button(({theme}) => ({
   position: 'relative',
   bottom: 0,
   backgroundColor: '#f7fbfc',
+  margin: 0,
   padding: 20,
   width: '100%',
   border: 'none',
@@ -97,10 +98,9 @@ export default ({finished, date, devotional, lessons, teacher, type}) => {
   return (
     <Card>
       <CardContent>
+        <LessonDate>{moment(date).format('dddd, MMMM D')}</LessonDate>
         {lessons.map(lesson => <Lesson key={lesson.lesson} {...lesson} />)}
-        <LessonDate>
-          {moment(date).format('MMMM D')} - {teacher}
-        </LessonDate>
+        <LessonDate>{teacher}</LessonDate>
         <Hr />
         {devotional.map(({assignee, assignment}) => (
           <React.Fragment key={assignment}>

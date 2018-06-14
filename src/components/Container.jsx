@@ -7,6 +7,8 @@ import Schedule from '../pages/schedule';
 import Hymns from '../pages/hymns';
 
 const Wrapper = styled.div(({theme}) => ({
+  margin: 'auto',
+  maxWidth: 600,
   paddingLeft: 30,
   paddingRight: 30,
   paddingBottom: 30,

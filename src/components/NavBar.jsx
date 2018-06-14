@@ -13,6 +13,11 @@ const Container = emotion.div({
   left: 0,
   right: 0,
   backgroundColor: '#fff',
+});
+
+const Spacer = emotion.div({
+  margin: 'auto',
+  maxWidth: 600,
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center',
@@ -49,16 +54,18 @@ class NavBar extends Component {
 
     return (
       <Container>
-        {icons.map(({Icon, path}) => (
-          <Icon
-            key={path}
-            onClick={() => {
-              this.props.history.push(path);
-            }}
-            size={24}
-            className={iconClassName(pathname === path)}
-          />
-        ))}
+        <Spacer>
+          {icons.map(({Icon, path}) => (
+            <Icon
+              key={path}
+              onClick={() => {
+                this.props.history.push(path);
+              }}
+              size={24}
+              className={iconClassName(pathname === path)}
+            />
+          ))}
+        </Spacer>
       </Container>
     );
   }

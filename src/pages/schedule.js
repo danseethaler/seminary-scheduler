@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {getSchedule} from '../services/schedule';
-import {Span} from '../components/text';
 
 class Schedule extends Component {
   render() {
@@ -21,7 +20,7 @@ const ScheduleDate = ({
 }) => {
   return (
     <div>
-      <Span type="primary">Today</Span>
+      <span type="primary">Today</span>
       {date} - {title}
       <p>{type}</p>
     </div>

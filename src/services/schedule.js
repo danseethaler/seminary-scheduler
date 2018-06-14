@@ -3,7 +3,7 @@ import {getAllData} from '../airtable';
 import {tables, noClassTypes} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
-import tempSchedule from '../temp_schedule';
+// import tempSchedule from '../temp_schedule';
 
 const addReferences = datasets => {
   datasets.substitutes = datasets.substitutes.map(sub => {

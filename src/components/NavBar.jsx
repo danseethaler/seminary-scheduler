@@ -30,16 +30,16 @@ const icons = [
     path: '/',
   },
   {
-    Icon: Calendar,
-    path: '/schedule',
-  },
-  {
     Icon: Music,
     path: '/music',
   },
   {
     Icon: Links,
     path: '/links',
+  },
+  {
+    Icon: Calendar,
+    path: '/schedule',
   },
 ];
 

@@ -10,7 +10,7 @@ class Schedule extends Component {
 }
 
 const ScheduleDate = ({date, devotional, lessons, teacher, ...rest}) => {
-  const lesson = lessons.shift();
+  const lesson = lessons[0];
   if (!lesson) return null;
   return (
     <div>

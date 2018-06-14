@@ -18,9 +18,7 @@ const addReferences = datasets => {
 };
 
 const transformData = datasets => {
-  datasets.teachers = datasets.teachers
-    .filter(({fulltime}) => fulltime)
-    .map(({name}) => name);
+  datasets.teachers = datasets.teachers.map(({name}) => name);
 
   datasets.students = datasets.students
     .filter(({name}) => name)
@@ -45,6 +43,12 @@ const getTeacher = (date, type, teachers, swaps, substitutes) => {
   const week = moment(date).week();
   const year = moment(date).year();
   let dateWeekYear = `${week}_${year}`;
+
+  // Setup the first week so we don't push the first
+  // teacher to the end
+  if (classWeeks.length === 0) {
+    classWeeks.push(dateWeekYear);
+  }
 
   // If this is a new week
   if (!classWeeks.includes(dateWeekYear)) {
@@ -113,7 +117,7 @@ const matchDatesToLessons = ({
   });
 };
 
-let schedule = tempSchedule;
+let schedule;
 
 export default () =>
   getAllData(tables)
@@ -151,8 +155,6 @@ const getDayName = date => {
   } else {
     return diff + ' Days';
   }
-
-  return diff;
 };
 
 export const getNextClass = () => {

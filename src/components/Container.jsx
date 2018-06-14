@@ -29,33 +29,34 @@ const Circle = styled.div(({theme}) => ({
   width: 190,
 }));
 
-const nextClass = getNextClass();
+export default ({title, children}) => {
+  const nextClass = getNextClass();
 
-export default ({title, children}) => (
-  <Wrapper>
-    <Circle />
-    <Switch>
-      <Route
-        exact
-        path="/"
-        render={() => (
-          <React.Fragment>
-            <Title>{nextClass.dayName}</Title>
-            <LessonCard {...nextClass} />
-          </React.Fragment>
-        )}
-      />
-      <Route
-        exact
-        path="/schedule"
-        render={() => (
-          <React.Fragment>
-            <Title>Schedule</Title>
-            <Schedule />
-          </React.Fragment>
-        )}
-      />
-    </Switch>
-    {children}
-  </Wrapper>
-);
+  return (
+    <Wrapper>
+      <Circle />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <React.Fragment>
+              <Title>{nextClass.dayName}</Title>
+              <LessonCard {...nextClass} />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/schedule"
+          render={() => (
+            <React.Fragment>
+              <Title>Schedule</Title>
+              <Schedule />
+            </React.Fragment>
+          )}
+        />
+      </Switch>
+    </Wrapper>
+  );
+};

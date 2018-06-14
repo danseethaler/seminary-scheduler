@@ -1,6 +1,8 @@
 html {
-  background: linear-gradient(#f7f9fa 40%, #e4ebf0);
+  /* background: linear-gradient(#f7f9fa 40%, #e4ebf0); */
   height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {

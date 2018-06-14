@@ -31,7 +31,7 @@ const icons = [
   },
   {
     Icon: Music,
-    path: '/music',
+    path: '/hymns',
   },
   {
     Icon: Links,

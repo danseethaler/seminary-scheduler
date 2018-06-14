@@ -48,6 +48,24 @@ export default ({title, children}) => {
         />
         <Route
           exact
+          path="/hymns"
+          render={() => (
+            <React.Fragment>
+              <Title>Hymns</Title>
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/links"
+          render={() => (
+            <React.Fragment>
+              <Title>Links</Title>
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
           path="/schedule"
           render={() => (
             <React.Fragment>

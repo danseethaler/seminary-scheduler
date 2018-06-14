@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import moment from 'moment';
 import {getSchedule} from '../services/schedule';
 
 class Schedule extends Component {
@@ -8,21 +9,12 @@ class Schedule extends Component {
   }
 }
 
-const ScheduleDate = ({
-  date,
-  devotional,
-  lesson,
-  teacher,
-  title,
-  type,
-  url,
-  ...rest
-}) => {
+const ScheduleDate = ({date, devotional, lessons, teacher, ...rest}) => {
+  const lesson = lessons.shift();
+  if (!lesson) return null;
   return (
     <div>
-      <span type="primary">Today</span>
-      {date} - {title}
-      <p>{type}</p>
+      {moment(date).format('MMM D')} - {lesson.title}
     </div>
   );
 };

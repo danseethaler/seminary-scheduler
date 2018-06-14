@@ -153,7 +153,7 @@ const getDayName = date => {
   } else if (diff === 1) {
     return 'Tomorrow';
   } else {
-    return diff + ' Days';
+    return `Next class in ${diff} days`;
   }
 };
 

@@ -1,32 +1,37 @@
 import React, {Component} from 'react';
+import {Card} from '../components/bits';
 import hymns from '../data/hymns';
 import Play from 'react-icons/lib/io/play';
+import Stop from 'react-icons/lib/io/stop';
 import emotion, {css} from 'react-emotion';
 
-const Wrapper = emotion.div({
-  marginBottom: 40,
-  backgroundColor: '#f3f3f3',
-  borderRadius: 5,
+const OuterWrapper = emotion.div({
+  display: 'flex',
+  flexDirection: 'column',
 });
 
 const HymnWrapper = emotion.div({
   display: 'flex',
   flexDirection: 'row',
-  // padding: '8px 0',
-  borderBottom: '1px solid #ffffff',
+  alignItems: 'center',
+  borderBottom: '1px solid #ececec',
 });
 
 const HymnTitle = emotion.div(({theme}) => ({
   color: theme.colors.text.primary,
-  borderLeft: '2px solid #fff',
-  padding: '5px 4px',
+  padding: '8px 4px',
 }));
 
+const Audio = emotion.audio({
+  margin: 'auto',
+  padding: 3,
+});
+
 const Player = ({url}) => (
-  <audio controls autoPlay>
+  <Audio controls autoPlay>
     <source src={url} type="audio/mpeg" />
     Your browser does not support the audio element.
-  </audio>
+  </Audio>
 );
 
 const unavailableClassName = css({
@@ -47,9 +52,11 @@ class Hymn extends Component {
   render() {
     let PlayButton = <Play className={unavailableClassName} size={14} />;
 
+    const ActionButton = this.state.playing ? Stop : Play;
+
     if (this.props.url) {
       PlayButton = (
-        <Play
+        <ActionButton
           className={playClassName}
           size={14}
           onClick={() => {
@@ -60,7 +67,7 @@ class Hymn extends Component {
     }
 
     return (
-      <React.Fragment>
+      <OuterWrapper>
         <HymnWrapper>
           {PlayButton}
           <HymnTitle>
@@ -68,7 +75,7 @@ class Hymn extends Component {
           </HymnTitle>
         </HymnWrapper>
         {this.state.playing ? <Player url={this.props.url} /> : null}
-      </React.Fragment>
+      </OuterWrapper>
     );
   }
 }
@@ -76,9 +83,7 @@ class Hymn extends Component {
 class Hymns extends Component {
   render() {
     return (
-      <Wrapper>
-        {hymns.map(hymn => <Hymn key={hymn.number} {...hymn} />)}
-      </Wrapper>
+      <Card>{hymns.map(hymn => <Hymn key={hymn.number} {...hymn} />)}</Card>
     );
   }
 }

@@ -3,6 +3,7 @@ import {getAllData} from '../airtable';
 import {tables, noClassTypes} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
+import tempSchedule from '../temp_schedule';
 
 const addReferences = datasets => {
   datasets.substitutes = datasets.substitutes.map(sub => {
@@ -112,7 +113,7 @@ const matchDatesToLessons = ({
   });
 };
 
-let schedule;
+let schedule = tempSchedule;
 
 export default () =>
   getAllData(tables)
@@ -124,3 +125,20 @@ export default () =>
     });
 
 export const getSchedule = () => schedule;
+
+const sortBy = property => {
+  return (a, b) => {
+    if (a[property] > b[property]) {
+      return 1;
+    }
+    if (a[property] < b[property]) {
+      return -1;
+    }
+    return 0;
+  };
+};
+
+export const getNextClass = () => {
+  const today = moment();
+  return schedule.sort(sortBy('date')).find(({date}) => today <= moment(date));
+};

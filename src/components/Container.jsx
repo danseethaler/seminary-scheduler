@@ -4,6 +4,7 @@ import {getNextClass} from '../services/schedule';
 import LessonCard from './LessonCard';
 import {Switch, Route} from 'react-router-dom';
 import Schedule from '../pages/schedule';
+import Hymns from '../pages/hymns';
 
 const Wrapper = styled.div(({theme}) => ({
   paddingLeft: 30,
@@ -52,6 +53,7 @@ export default ({title, children}) => {
           render={() => (
             <React.Fragment>
               <Title>Hymns</Title>
+              <Hymns />
             </React.Fragment>
           )}
         />

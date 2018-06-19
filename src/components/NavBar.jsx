@@ -33,7 +33,7 @@ const iconClassName = active =>
 const icons = [
   {
     Icon: Bookmark,
-    path: '/',
+    path: '',
   },
   {
     Icon: Music,
@@ -52,20 +52,25 @@ const icons = [
 class NavBar extends Component {
   render() {
     const {pathname} = this.props.history.location;
+    const location = pathname.split('/')[1];
 
     return (
       <Container>
         <Spacer>
-          {icons.map(({Icon, path}) => (
-            <Icon
-              key={path}
-              onClick={() => {
-                this.props.history.push(path);
-              }}
-              size={24}
-              className={iconClassName(pathname === path)}
-            />
-          ))}
+          {icons.map(({Icon, path}) => {
+            const fullPath = `/${location}${path}`;
+
+            return (
+              <Icon
+                key={path}
+                onClick={() => {
+                  this.props.history.push(fullPath);
+                }}
+                size={24}
+                className={iconClassName(pathname === fullPath)}
+              />
+            );
+          })}
         </Spacer>
       </Container>
     );

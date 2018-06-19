@@ -1,12 +1,17 @@
 import Airtable from 'airtable';
 import moment from 'moment';
+import bases from './config/bases';
 
 Airtable.configure({
   endpointUrl: 'https://api.airtable.com',
   apiKey: 'keyIlUCXzs478blRK',
 });
 
-const base = Airtable.base('app6uhinwR8sGR8uh');
+let base;
+
+export const setupAirtable = baseName => {
+  base = Airtable.base(bases[baseName].baseKey);
+};
 
 // Takes a table name and an array of records to insert
 // return a promise that resolves when complete

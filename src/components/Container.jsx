@@ -32,7 +32,7 @@ const Circle = styled.div(({theme}) => ({
   width: 190,
 }));
 
-export default ({title, children}) => {
+export default ({match, title, children}) => {
   const nextClass = getNextClass();
 
   return (
@@ -41,7 +41,7 @@ export default ({title, children}) => {
       <Switch>
         <Route
           exact
-          path="/"
+          path="/:location"
           render={() => (
             <React.Fragment>
               <Title>{nextClass.dayName}</Title>
@@ -51,7 +51,7 @@ export default ({title, children}) => {
         />
         <Route
           exact
-          path="/hymns"
+          path="/:location/hymns"
           render={() => (
             <React.Fragment>
               <Title>Hymns</Title>
@@ -61,7 +61,7 @@ export default ({title, children}) => {
         />
         <Route
           exact
-          path="/links"
+          path="/:location/links"
           render={() => (
             <React.Fragment>
               <Title>Links</Title>
@@ -70,7 +70,7 @@ export default ({title, children}) => {
         />
         <Route
           exact
-          path="/schedule"
+          path="/:location/schedule"
           render={() => (
             <React.Fragment>
               <Title>Schedule</Title>

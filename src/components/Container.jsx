@@ -2,7 +2,7 @@ import React from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import Home from '../pages/Home';
 import Hymns from '../pages/Hymns';
-import Links from '../pages/Links';
+import Info from '../pages/Info';
 import Schedule from '../pages/Schedule';
 import {Title} from './Bits';
 import NavBar from './NavBar';

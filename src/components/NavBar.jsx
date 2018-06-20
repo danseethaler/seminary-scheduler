@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import emotion, {css} from 'react-emotion';
 import Bookmark from 'react-icons/lib/io/android-bookmark';
 import Calendar from 'react-icons/lib/io/android-calendar';
-import Links from 'react-icons/lib/io/link';
+import Info from 'react-icons/lib/io/informatcircled';
 import Music from 'react-icons/lib/io/music-note';
 import {withRouter} from 'react-router-dom';
 
@@ -44,8 +44,8 @@ const icons = [
     path: '/schedule',
   },
   {
-    Icon: Links,
-    path: '/links',
+    Icon: Info,
+    path: '/info',
   },
 ];
 

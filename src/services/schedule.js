@@ -3,7 +3,6 @@ import {getAllData} from '../airtable';
 import {noClassTypes, tables} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
-// import tempSchedule from '../temp_schedule';
 
 const transformData = datasets => {
   datasets.teachers = datasets.teachers.map(({name}) => name);

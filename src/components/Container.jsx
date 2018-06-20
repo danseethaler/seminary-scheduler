@@ -5,14 +5,7 @@ import LessonCard from './LessonCard';
 import {Switch, Route} from 'react-router-dom';
 import Schedule from '../pages/schedule';
 import Hymns from '../pages/hymns';
-
-const Wrapper = styled.div(({theme}) => ({
-  margin: 'auto',
-  maxWidth: 600,
-  paddingLeft: 30,
-  paddingRight: 30,
-  paddingBottom: 30,
-}));
+import NavBar from './NavBar';
 
 export const Title = styled.h1(({theme, type = 'primary'}) => ({
   color: theme.colors.text[type],
@@ -21,23 +14,15 @@ export const Title = styled.h1(({theme, type = 'primary'}) => ({
   fontSize: '1.8em',
 }));
 
-const Circle = styled.div(({theme}) => ({
-  background: 'radial-gradient(circle at center, transparent 47%, #ef0b18 47%)',
-  position: 'fixed',
-  top: -50,
-  right: -50,
-  opacity: 0.2,
-  borderRadius: 100,
-  height: 190,
-  width: 190,
-}));
+export default ({loading, title, children}) => {
+  if (loading) {
+    return <Title>Loading data...</Title>;
+  }
 
-export default ({match, title, children}) => {
   const nextClass = getNextClass();
 
   return (
-    <Wrapper>
-      <Circle />
+    <React.Fragment>
       <Switch>
         <Route
           exact
@@ -79,6 +64,8 @@ export default ({match, title, children}) => {
           )}
         />
       </Switch>
-    </Wrapper>
+
+      <NavBar />
+    </React.Fragment>
   );
 };

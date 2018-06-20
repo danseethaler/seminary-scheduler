@@ -1,6 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import styled from 'react-emotion';
+import {Link} from 'react-router-dom';
 import {Card} from './bits';
 
 const CardContent = styled.div(({theme}) => ({
@@ -13,12 +14,13 @@ export const LessonNumber = styled.p(({theme, type = 'primary'}) => ({
   opacity: 0.7,
   color: theme.colors.text.secondary,
   fontSize: 14,
-  margin: '0 0 5px',
+  margin: '10px 0 5px',
 }));
 
-export const LessonTitle = styled.h2(({theme, type = 'primary'}) => ({
-  color: '#a5adb7',
+export const LessonTitle = styled.a(({theme, type = 'primary'}) => ({
+  color: '#da252f',
   margin: '0 0 10px',
+  textDecoration: 'none',
   fontFamily: "'Roboto', sans-serif",
   fontWeight: 400,
   fontSize: 18,
@@ -30,7 +32,7 @@ export const LessonDate = styled.h3(({theme, type = 'primary'}) => ({
   fontFamily: "'Lato', sans-serif",
   fontWeight: 600,
   fontSize: 16,
-  margin: '20px 0',
+  margin: '0 0 20px 0',
   letterSpacing: '.1em',
 }));
 
@@ -65,6 +67,7 @@ export const ButtonText = styled.span(({theme, type = 'primary'}) => ({
 
 export const Hr = styled.div(({theme, type = 'primary'}) => ({
   width: 'calc(100% - 20px)',
+  margin: '20px 0',
   borderBottom: `1px solid rgba(226, 226, 226, 0.6)`,
 }));
 
@@ -85,12 +88,16 @@ const CardButton = styled.button(({theme}) => ({
   },
 }));
 
-const Lesson = ({title, lesson, url}) => (
-  <React.Fragment>
-    <LessonNumber>Lesson {lesson}</LessonNumber>
-    <LessonTitle>{title}</LessonTitle>
-  </React.Fragment>
-);
+const Lesson = ({title, lesson, url}) => {
+  return (
+    <React.Fragment>
+      <LessonNumber>Lesson {lesson}</LessonNumber>
+      <LessonTitle target="_blank" href={url}>
+        {title}
+      </LessonTitle>
+    </React.Fragment>
+  );
+};
 
 export default ({finished, date, devotional, lessons, teacher, type}) => {
   if (finished) return null;
@@ -98,10 +105,11 @@ export default ({finished, date, devotional, lessons, teacher, type}) => {
   return (
     <Card>
       <CardContent>
-        <LessonDate>{moment(date).format('dddd, MMMM D')}</LessonDate>
+        <LessonDate>
+          {moment(date).format('dddd, MMMM D')} - {teacher}
+        </LessonDate>
         {lessons.map(lesson => <Lesson key={lesson.lesson} {...lesson} />)}
-        <LessonDate>{teacher}</LessonDate>
-        <Hr />
+        <Hr style={{mariginTop: 10}} />
         {devotional.map(({assignee, assignment}) => (
           <React.Fragment key={assignment}>
             <Assignment>{assignee}</Assignment>
@@ -109,9 +117,6 @@ export default ({finished, date, devotional, lessons, teacher, type}) => {
           </React.Fragment>
         ))}
       </CardContent>
-      <CardButton onClick={() => lessons.forEach(({url}) => window.open(url))}>
-        <ButtonText>Open</ButtonText>
-      </CardButton>
     </Card>
   );
 };

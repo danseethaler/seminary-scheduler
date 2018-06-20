@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import emotion, {css} from 'react-emotion';
 import Bookmark from 'react-icons/lib/io/android-bookmark';
-import Music from 'react-icons/lib/io/music-note';
-import Links from 'react-icons/lib/io/link';
 import Calendar from 'react-icons/lib/io/android-calendar';
+import Links from 'react-icons/lib/io/link';
+import Music from 'react-icons/lib/io/music-note';
 import {withRouter} from 'react-router-dom';
 
 const Container = emotion.div({
@@ -40,12 +40,12 @@ const icons = [
     path: '/hymns',
   },
   {
-    Icon: Links,
-    path: '/links',
-  },
-  {
     Icon: Calendar,
     path: '/schedule',
+  },
+  {
+    Icon: Links,
+    path: '/links',
   },
 ];
 

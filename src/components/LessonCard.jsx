@@ -1,7 +1,6 @@
 import moment from 'moment';
 import React from 'react';
 import styled from 'react-emotion';
-import {Link} from 'react-router-dom';
 import {Card} from './Bits';
 
 const CardContent = styled.div(({theme}) => ({
@@ -69,23 +68,6 @@ export const Hr = styled.div(({theme, type = 'primary'}) => ({
   width: 'calc(100% - 20px)',
   margin: '20px 0',
   borderBottom: `1px solid rgba(226, 226, 226, 0.6)`,
-}));
-
-const CardButton = styled.button(({theme}) => ({
-  position: 'relative',
-  bottom: 0,
-  backgroundColor: '#f7fbfc',
-  margin: 0,
-  padding: 20,
-  width: '100%',
-  border: 'none',
-  borderRadius: '0 0 5px 5px',
-  cursor: 'pointer',
-  outline: 'none',
-  transition: 'all .3s',
-  ':hover': {
-    backgroundColor: '#f1f1f1',
-  },
 }));
 
 const Lesson = ({title, lesson, url}) => {

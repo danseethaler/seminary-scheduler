@@ -13,3 +13,20 @@ export const Card = styled.div(({theme}) => ({
   opacity: 0.99,
   boxShadow: `0px 40px 160px ${theme.colors.background.shadow}`,
 }));
+
+export const CardButton = styled.button(({theme}) => ({
+  position: 'relative',
+  bottom: 0,
+  backgroundColor: '#f7fbfc',
+  margin: 0,
+  padding: 20,
+  width: '100%',
+  border: 'none',
+  borderRadius: '0 0 5px 5px',
+  cursor: 'pointer',
+  outline: 'none',
+  transition: 'all .3s',
+  ':hover': {
+    backgroundColor: '#f1f1f1',
+  },
+}));

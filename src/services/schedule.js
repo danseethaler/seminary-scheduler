@@ -1,21 +1,9 @@
 import moment from 'moment';
 import {getAllData} from '../airtable';
-import {tables, noClassTypes} from '../constants';
+import {noClassTypes, tables} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
 // import tempSchedule from '../temp_schedule';
-
-const addReferences = datasets => {
-  datasets.substitutes = datasets.substitutes.map(sub => {
-    const teacherId = sub.teacher[0];
-    const teacher = datasets.teachers.find(({id}) => id === teacherId);
-    return {
-      date: sub.date,
-      teacher: teacher.name,
-    };
-  });
-  return datasets;
-};
 
 const transformData = datasets => {
   datasets.teachers = datasets.teachers.map(({name}) => name);
@@ -29,36 +17,25 @@ const transformData = datasets => {
 
 const classWeeks = [];
 
-const getTeacher = (date, type, teachers, swaps, substitutes) => {
+const getTeacher = (date, type, teachers) => {
   // If there's no class return null
-  if (noClassTypes.includes(type)) {
-    return null;
-  }
-
-  // Return the substitute if one is listed
-  const substitute = substitutes.find(({date: subData}) => subData === date);
-  if (substitute) return substitute.teacher;
+  if (noClassTypes.includes(type)) return null;
 
   // Set the week index
   const week = moment(date).week();
   const year = moment(date).year();
-  let dateWeekYear = `${week}_${year}`;
+  let weekYear = `${week}_${year}`;
 
   // Setup the first week so we don't push the first
   // teacher to the end
   if (classWeeks.length === 0) {
-    classWeeks.push(dateWeekYear);
+    classWeeks.push(weekYear);
   }
 
   // If this is a new week
-  if (!classWeeks.includes(dateWeekYear)) {
-    classWeeks.push(dateWeekYear);
+  if (!classWeeks.includes(weekYear)) {
+    classWeeks.push(weekYear);
     // Move the current teacher to end of the array
-    teachers.push(teachers.shift());
-  }
-
-  // Move the current teacher to end of the array
-  if (swaps.some(({date: swapDate}) => swapDate === date)) {
     teachers.push(teachers.shift());
   }
 
@@ -90,38 +67,38 @@ const setupLessons = (dates, lessons) => {
   };
 };
 
-const matchDatesToLessons = ({
-  students,
-  dates,
-  teachers,
-  swaps,
-  substitutes,
-}) => {
+const matchDatesToLessons = ({students, teachers, dates}) => {
   const assignments = ['Opening Prayer', 'Spritual Thought', 'Closing Prayer'];
 
   const getNextDevotional = assignment(assignments, students);
   const getLesson = setupLessons(dates, dac);
 
-  return dates.map(({date, type, lessonCount = 1}, i) => {
-    const devotional = noClassTypes.includes(type) ? null : getNextDevotional();
+  return dates.map(
+    ({date, type, substitute, teacher_swap, lessonCount = 1, ...rest}, i) => {
+      const devotional = noClassTypes.includes(type)
+        ? null
+        : getNextDevotional();
 
-    const lessons = [];
-    for (let index = 0; index < lessonCount; index++) {
-      const lesson = getLesson(i);
-      if (lesson) lessons.push(lesson);
+      const lessons = [];
+      for (let index = 0; index < lessonCount; index++) {
+        const lesson = getLesson(i);
+        if (lesson) lessons.push(lesson);
+      }
+
+      // Move the current teacher to end of the array
+      if (teacher_swap) teachers.push(teachers.shift());
+
+      const teacher = substitute || getTeacher(date, type, teachers);
+
+      return {date, type, teacher, devotional, lessons, ...rest};
     }
-
-    const teacher = getTeacher(date, type, teachers, swaps, substitutes);
-
-    return {date, type, teacher, devotional, lessons};
-  });
+  );
 };
 
 let schedule;
 
 export default () =>
   getAllData(tables)
-    .then(addReferences)
     .then(transformData)
     .then(matchDatesToLessons)
     .then(fullSchedule => {

@@ -2,7 +2,7 @@ import moment from 'moment';
 import React from 'react';
 import styled from 'react-emotion';
 import {Link} from 'react-router-dom';
-import {Card} from './bits';
+import {Card} from './Bits';
 
 const CardContent = styled.div(({theme}) => ({
   padding: 20,

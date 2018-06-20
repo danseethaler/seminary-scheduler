@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Card} from '../components/bits';
-import hymns from '../data/hymns';
+import emotion, {css} from 'react-emotion';
 import Play from 'react-icons/lib/io/play';
 import Stop from 'react-icons/lib/io/stop';
-import emotion, {css} from 'react-emotion';
+import {Card, Title} from '../components/Bits';
+import hymns from '../data/hymns';
 
 const OuterWrapper = emotion.div({
   display: 'flex',
@@ -17,8 +17,8 @@ const HymnWrapper = emotion.div({
   borderBottom: '1px solid #ececec',
 });
 
-const HymnTitle = emotion.div(({theme}) => ({
-  color: theme.colors.text.primary,
+const HymnTitle = emotion.div(({theme, disabled}) => ({
+  color: disabled ? theme.colors.text.secondary : theme.colors.text.primary,
   padding: '8px 4px',
 }));
 
@@ -70,7 +70,7 @@ class Hymn extends Component {
       <OuterWrapper>
         <HymnWrapper>
           {PlayButton}
-          <HymnTitle>
+          <HymnTitle disabled={!this.props.url}>
             {this.props.number} - {this.props.title}
           </HymnTitle>
         </HymnWrapper>
@@ -83,7 +83,12 @@ class Hymn extends Component {
 class Hymns extends Component {
   render() {
     return (
-      <Card>{hymns.map(hymn => <Hymn key={hymn.number} {...hymn} />)}</Card>
+      <React.Fragment>
+        <Title>Hymns</Title>
+        <Card style={{marginBottom: 70}}>
+          {hymns.map(hymn => <Hymn key={hymn.number} {...hymn} />)}
+        </Card>
+      </React.Fragment>
     );
   }
 }

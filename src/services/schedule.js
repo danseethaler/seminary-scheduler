@@ -4,6 +4,8 @@ import {noClassTypes, tables} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
 
+const SCHEDULE_VERSION = '0.0.1';
+
 const transformData = datasets => {
   datasets.teachers = datasets.teachers.map(({name}) => name);
 
@@ -94,15 +96,35 @@ const matchDatesToLessons = ({students, teachers, dates}) => {
   );
 };
 
+const getLocalStorageName = baseName => `sem_schedule_${baseName}`;
+
 let schedule;
 
-export default () =>
-  getAllData(tables)
+export default (baseName, callback) => {
+  // Setup schedule from local
+  const localSchedule = JSON.parse(
+    localStorage.getItem(getLocalStorageName(baseName)) || '{}'
+  );
+
+  if (localSchedule.version === SCHEDULE_VERSION) {
+    schedule = localSchedule.dates;
+    callback(localSchedule.dates);
+  }
+
+  return getAllData(tables)
     .then(transformData)
     .then(matchDatesToLessons)
     .then(fullSchedule => {
+      // Store local version of the app
+      localStorage.setItem(
+        getLocalStorageName(baseName),
+        JSON.stringify({version: SCHEDULE_VERSION, dates: fullSchedule})
+      );
+
       schedule = fullSchedule;
+      callback(fullSchedule);
     });
+};
 
 export const getSchedule = () => schedule;
 

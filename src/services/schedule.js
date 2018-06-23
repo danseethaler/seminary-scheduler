@@ -1,10 +1,10 @@
 import moment from 'moment';
 import {getAllData} from '../airtable';
-import {noClassTypes, tables} from '../constants';
+import {typesWithNoClass, tables} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
 
-const SCHEDULE_VERSION = '0.0.1';
+const SCHEDULE_VERSION = '0.0.2';
 
 const transformData = datasets => {
   datasets.teachers = datasets.teachers.map(({name}) => name);
@@ -20,7 +20,7 @@ const classWeeks = [];
 
 const getTeacher = (date, type, teachers) => {
   // If there's no class return null
-  if (noClassTypes.includes(type)) return null;
+  if (typesWithNoClass.includes(type)) return null;
 
   // Set the week index
   const week = moment(date).week();
@@ -56,10 +56,9 @@ const setupLessons = (dates, lessons) => {
       case 'class':
         return lessons[lessonIndex];
 
-      case 'custom':
+      case 'flex':
         return {notes};
 
-      case 'flex':
       case 'holiday':
       case 'cancelled':
       default:
@@ -68,7 +67,7 @@ const setupLessons = (dates, lessons) => {
   };
 };
 
-const matchDatesToLessons = ({students, teachers, dates}) => {
+export const matchDatesToLessons = ({students, teachers, dates}) => {
   const assignments = ['Opening Prayer', 'Spritual Thought', 'Closing Prayer'];
 
   const getNextDevotional = assignment(assignments, students);
@@ -76,7 +75,7 @@ const matchDatesToLessons = ({students, teachers, dates}) => {
 
   return dates.map(
     ({date, type, substitute, teacher_swap, lessonCount = 1, ...rest}, i) => {
-      const devotional = noClassTypes.includes(type)
+      const devotional = typesWithNoClass.includes(type)
         ? null
         : getNextDevotional();
 
@@ -96,37 +95,100 @@ const matchDatesToLessons = ({students, teachers, dates}) => {
   );
 };
 
-const getLocalStorageName = baseName => `sem_schedule_${baseName}`;
+export const setupInfoConfig = (transformedData, classList, fullSchedule) => {
+  const countOfClassLessons = transformedData.dates
+    .filter(({type}) => type === 'class')
+    .reduce(
+      (totalClassLessons, {lessonCount}) => totalClassLessons + lessonCount,
+      0
+    );
+
+  const expectedClasses = classList.length;
+
+  let errorMessages = [];
+
+  if (countOfClassLessons > expectedClasses) {
+    errorMessages.push(
+      `You have ${countOfClassLessons} classes but there are only ${expectedClasses} this year. Consider changing class days in Airtable to flex days.`
+    );
+  } else if (countOfClassLessons < expectedClasses) {
+    errorMessages.push(
+      `You have ${countOfClassLessons} classes but there are ${expectedClasses} this year. Consider changing flex days in Airtable to class days or covering two classes on the same day.`
+    );
+  }
+
+  const datesMissingType = transformedData.dates
+    .filter(({type, date}) => !type && date)
+    .map(({date}) => moment(date).format('M/D/YYYY'));
+
+  if (datesMissingType.length > 0) {
+    errorMessages.push(
+      `The following dates are missing a corresponding type: ${datesMissingType.join(
+        ', '
+      )}. Update Airtable to reflect the correct type (i.e. class, flex, etc.) or delete the date.`
+    );
+  }
+
+  const teacherConfig = fullSchedule
+    .filter(({teacher}) => teacher)
+    .reduce((teacherConfig, {teacher, type}) => {
+      if (!teacherConfig[teacher]) {
+        teacherConfig[teacher] = {lessonCount: 0};
+      }
+      teacherConfig[teacher].lessonCount++;
+      return teacherConfig;
+    }, {});
+
+  return {
+    countOfClassLessons,
+    errorMessages,
+    teacherConfig,
+  };
+};
+
+const getLocalStorageName = baseName => `semimary_data_${baseName}`;
 
 let schedule;
+let infoConfig;
 
 export default (baseName, callback) => {
   // Setup schedule from local
-  const localSchedule = JSON.parse(
+  const localData = JSON.parse(
     localStorage.getItem(getLocalStorageName(baseName)) || '{}'
   );
 
-  if (localSchedule.version === SCHEDULE_VERSION) {
-    schedule = localSchedule.dates;
-    callback(localSchedule.dates);
+  if (localData.version === SCHEDULE_VERSION) {
+    schedule = localData.schedule;
+    infoConfig = localData.infoConfig;
+    callback(localData.schedule, localData.infoConfig);
   }
 
   return getAllData(tables)
     .then(transformData)
-    .then(matchDatesToLessons)
-    .then(fullSchedule => {
+    .then(transformedData => {
+      const fullSchedule = matchDatesToLessons(transformedData);
+
+      // Replace outer scope variables with updated data
+      infoConfig = setupInfoConfig(transformedData, dac, fullSchedule);
+      schedule = fullSchedule;
+
       // Store local version of the app
       localStorage.setItem(
         getLocalStorageName(baseName),
-        JSON.stringify({version: SCHEDULE_VERSION, dates: fullSchedule})
+        JSON.stringify({
+          version: SCHEDULE_VERSION,
+          schedule: fullSchedule,
+          infoConfig,
+        })
       );
 
-      schedule = fullSchedule;
-      callback(fullSchedule);
+      // Return the updates to the app
+      callback(fullSchedule, infoConfig);
     });
 };
 
 export const getSchedule = () => schedule;
+export const getInfoConfig = () => infoConfig;
 
 const sortBy = property => {
   return (a, b) => {

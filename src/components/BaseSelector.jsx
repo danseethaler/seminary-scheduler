@@ -53,8 +53,8 @@ class BaseSelector extends Component {
     setupAirtable(baseName);
     this.setState({loaded: false});
 
-    setupSchedule(baseName, schedule => {
-      this.setState({loaded: true, schedule});
+    setupSchedule(baseName, (schedule, infoConfig) => {
+      this.setState({loaded: true, schedule, infoConfig});
     });
   };
 

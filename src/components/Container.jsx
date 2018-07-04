@@ -4,7 +4,7 @@ import {Redirect, Route, Switch} from 'react-router-dom';
 import Home from '../pages/Home';
 import Hymns from '../pages/Hymns';
 import Info from '../pages/Info';
-import Schedule from '../pages/Schedule';
+import Schedule from '../pages/schedule';
 import {getInfoConfig} from '../services/schedule';
 import {Title} from './Bits';
 import Errors from './errors';

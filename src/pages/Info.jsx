@@ -9,7 +9,6 @@ const ErrorMessage = styled.h4({
 
 export default () => {
   const infoConfig = getInfoConfig();
-  console.log('infoConfig', infoConfig);
 
   return (
     <React.Fragment>

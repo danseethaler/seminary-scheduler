@@ -28,6 +28,7 @@ const iconClassName = active =>
     color: active ? '#65748a' : '#c2c7c8',
     padding: 20,
     '-webkit-tap-highlight-color': 'rgba(0,0,0,0)',
+    flexGrow: 1,
   });
 
 const icons = [

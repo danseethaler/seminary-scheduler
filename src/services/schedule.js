@@ -46,14 +46,13 @@ const getTeacher = (date, type, teachers) => {
 const setupLessons = (dates, lessons) => {
   let lessonIndex = -1;
   return dateIndex => {
-    lessonIndex++;
-
     if (!dates[dateIndex]) return null;
 
     const {type, notes} = dates[dateIndex];
 
     switch (type) {
       case 'class':
+        lessonIndex++;
         return lessons[lessonIndex];
 
       case 'flex':

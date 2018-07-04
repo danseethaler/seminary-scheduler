@@ -2,6 +2,7 @@ import moment from 'moment';
 import React, {Component} from 'react';
 import styled from 'react-emotion';
 import {Card, Title} from '../components/Bits';
+import {LessonDate} from '../components/LessonCard';
 import {getSchedule} from '../services/schedule';
 
 class Schedule extends Component {
@@ -17,34 +18,52 @@ class Schedule extends Component {
     );
   }
 }
+const CancelledClass = ({notes}) => `Cancelled${displayNotes(notes)}`;
+
+const Holiday = ({notes}) => `Holiday!${displayNotes(notes)}`;
 
 const LessonContainer = styled.div({
   padding: 12,
   borderBottom: '1px solid #eaeaea',
 });
 
-const ScheduleDate = ({date, devotional, lessons, teacher, type, notes}) => {
-  const displayNotes = notes ? ` - ${notes}` : '';
+const displayNotes = notes => (notes ? ` - ${notes}` : '');
+
+const ScheduleDate = classConfig => {
+  const {date, devotional, lessons, teacher, type, notes} = classConfig;
+  const formatedDate = moment(date).format('MMM D');
+
+  let innerContent = null;
+  let title = '';
+  const lesson = lessons[0];
+
+  if (type === 'class' && lesson) {
+    innerContent = teacher;
+    title = lesson.title;
+  }
 
   if (type === 'holiday') {
-    return <LessonContainer>Holiday!{displayNotes}</LessonContainer>;
+    // innerContent = <Holiday {...classConfig} />;
+    title = 'Holiday!';
+    innerContent = notes;
   }
 
   if (type === 'flex') {
-    return <LessonContainer>Holiday!{displayNotes}</LessonContainer>;
+    title = 'Flex day';
+    innerContent = notes;
   }
 
   if (type === 'cancelled') {
-    return <LessonContainer>Class cancelled{displayNotes}</LessonContainer>;
+    // innerContent = <CancelledClass {...classConfig} />;
+    title = 'Cancelled - no class today!';
   }
-
-  const lesson = lessons[0];
-
-  if (!lesson) return null;
 
   return (
     <LessonContainer>
-      {moment(date).format('MMM D') + ' - ' + lesson.title}
+      <LessonDate>
+        {formatedDate} - {title}
+      </LessonDate>
+      {innerContent}
     </LessonContainer>
   );
 };

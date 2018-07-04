@@ -6,7 +6,7 @@ import assignment from './assignment';
 
 const SCHEDULE_VERSION = '0.0.2';
 
-const transformData = datasets => {
+const cleanUpApiData = datasets => {
   datasets.teachers = datasets.teachers.map(({name}) => name);
 
   datasets.students = datasets.students
@@ -95,8 +95,8 @@ export const matchDatesToLessons = ({students, teachers, dates}) => {
   );
 };
 
-export const setupInfoConfig = (transformedData, classList, fullSchedule) => {
-  const countOfClassLessons = transformedData.dates
+export const setupInfoConfig = (dates, classList, fullSchedule) => {
+  const countOfClassLessons = dates
     .filter(({type}) => type === 'class')
     .reduce(
       (totalClassLessons, {lessonCount}) => totalClassLessons + lessonCount,
@@ -117,7 +117,7 @@ export const setupInfoConfig = (transformedData, classList, fullSchedule) => {
     );
   }
 
-  const datesMissingType = transformedData.dates
+  const datesMissingType = dates
     .filter(({type, date}) => !type && date)
     .map(({date}) => moment(date).format('M/D/YYYY'));
 
@@ -164,26 +164,26 @@ export default (baseName, callback) => {
   }
 
   return getAllData(tables)
-    .then(transformData)
-    .then(transformedData => {
-      const fullSchedule = matchDatesToLessons(transformedData);
+    .then(cleanUpApiData)
+    .then(data => {
+      // Replace outer scope schedule
+      schedule = matchDatesToLessons(data);
 
-      // Replace outer scope variables with updated data
-      infoConfig = setupInfoConfig(transformedData, dac, fullSchedule);
-      schedule = fullSchedule;
+      // Replace outer scope infoConfig
+      infoConfig = setupInfoConfig(data.dates, dac, schedule);
 
       // Store local version of the app
       localStorage.setItem(
         getLocalStorageName(baseName),
         JSON.stringify({
           version: SCHEDULE_VERSION,
-          schedule: fullSchedule,
+          schedule,
           infoConfig,
         })
       );
 
       // Return the updates to the app
-      callback(fullSchedule, infoConfig);
+      callback(schedule, infoConfig);
     });
 };
 

@@ -8,6 +8,7 @@ import {getSchedule} from '../services/schedule';
 class Schedule extends Component {
   render() {
     const schedule = getSchedule();
+    console.log(JSON.stringify(schedule, null, 4));
     return (
       <React.Fragment>
         <Title>Schedule</Title>
@@ -61,7 +62,7 @@ const ScheduleDate = classConfig => {
   return (
     <LessonContainer>
       <LessonDate>
-        {formatedDate} - {title}
+        {type} - {formatedDate} - {title}
       </LessonDate>
       {innerContent}
     </LessonContainer>

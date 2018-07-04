@@ -96,24 +96,30 @@ export const matchDatesToLessons = ({students, teachers, dates}) => {
 };
 
 export const setupInfoConfig = (dates, classList, fullSchedule) => {
-  const countOfClassLessons = dates
-    .filter(({type}) => type === 'class')
-    .reduce(
-      (totalClassLessons, {lessonCount}) => totalClassLessons + lessonCount,
-      0
-    );
+  const lessonCount = dates.reduce((lessonCounter, {type, lessonCount = 1}) => {
+    if (typeof lessonCounter[type] === 'undefined') {
+      lessonCounter[type] = 0;
+    }
+
+    lessonCounter[type] = lessonCounter[type] + lessonCount;
+    return lessonCounter;
+  }, {});
 
   const expectedClasses = classList.length;
 
   let errorMessages = [];
 
-  if (countOfClassLessons > expectedClasses) {
+  if (lessonCount.class > expectedClasses) {
     errorMessages.push(
-      `You have ${countOfClassLessons} classes but there are only ${expectedClasses} this year. Consider changing class days in Airtable to flex days.`
+      `You have ${
+        lessonCount.class
+      } classes but there are only ${expectedClasses} this year. Consider changing class days in Airtable to flex days.`
     );
-  } else if (countOfClassLessons < expectedClasses) {
+  } else if (lessonCount.class < expectedClasses) {
     errorMessages.push(
-      `You have ${countOfClassLessons} classes but there are ${expectedClasses} this year. Consider changing flex days in Airtable to class days or covering two classes on the same day.`
+      `You have ${
+        lessonCount.class
+      } classes but there are ${expectedClasses} this year. Consider changing flex days in Airtable to class days or covering two classes on the same day.`
     );
   }
 
@@ -133,14 +139,14 @@ export const setupInfoConfig = (dates, classList, fullSchedule) => {
     .filter(({teacher}) => teacher)
     .reduce((teacherConfig, {teacher, type}) => {
       if (!teacherConfig[teacher]) {
-        teacherConfig[teacher] = {lessonCount: 0};
+        teacherConfig[teacher] = {classCount: 0};
       }
-      teacherConfig[teacher].lessonCount++;
+      teacherConfig[teacher].classCount++;
       return teacherConfig;
     }, {});
 
   return {
-    countOfClassLessons,
+    lessonCount,
     errorMessages,
     teacherConfig,
   };

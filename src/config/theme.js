@@ -10,6 +10,7 @@ const colors = {
   text: {
     primary: '#5b6a82',
     secondary: '#bbc4d0',
+    danger: '#af000a',
   },
 };
 

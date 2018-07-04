@@ -24,17 +24,17 @@ describe('Setup schedule', () => {
 
 describe('Setup info config', () => {
   const fullSchedule = matchDatesToLessons(transformedData);
-  const response = setupInfoConfig(transformedData, dac, fullSchedule);
+  const response = setupInfoConfig(transformedData.dates, dac, fullSchedule);
 
   test('Return an object with expected keys', () => {
     expect(Object.keys(response)).toMatchObject([
-      'countOfClassLessons',
+      'lessonCount',
       'errorMessages',
       'teacherConfig',
     ]);
   });
 
   test('The number of lessons should be the sum of lessonCount on each lesson type', () => {
-    expect(response.countOfClassLessons).toEqual(160);
+    expect(response.lessonCount.class).toEqual(160);
   });
 });

@@ -70,7 +70,7 @@ export const Hr = styled.div(({theme, type = 'primary'}) => ({
   borderBottom: `1px solid rgba(226, 226, 226, 0.6)`,
 }));
 
-const Lesson = ({title, lesson, url}) => {
+export const Lesson = ({title, lesson, url}) => {
   return (
     <React.Fragment>
       <LessonNumber>Lesson {lesson}</LessonNumber>

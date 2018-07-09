@@ -2,7 +2,8 @@ import moment from 'moment';
 import React, {Component} from 'react';
 import styled from 'react-emotion';
 import {Card, Title} from '../components/Bits';
-import {LessonDate} from '../components/LessonCard';
+import {Lesson} from '../components/LessonCard';
+import {typeColors} from '../constants';
 import {getSchedule} from '../services/schedule';
 
 class Schedule extends Component {
@@ -18,52 +19,66 @@ class Schedule extends Component {
     );
   }
 }
-const CancelledClass = ({notes}) => `Cancelled${displayNotes(notes)}`;
-
-const Holiday = ({notes}) => `Holiday!${displayNotes(notes)}`;
 
 const LessonContainer = styled.div({
   padding: 12,
   borderBottom: '1px solid #eaeaea',
 });
 
-const displayNotes = notes => (notes ? ` - ${notes}` : '');
+const TypeTag = styled.span(({type}) => ({
+  padding: '3px 7px',
+  borderRadius: 10,
+  backgroundColor: typeColors[type],
+  color: '#565656',
+}));
+
+const TopContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+});
 
 const ScheduleDate = classConfig => {
   const {date, devotional, lessons, teacher, type, notes} = classConfig;
-  const formatedDate = moment(date).format('MMM D');
+  const formatedDate = moment(date).format('dddd, MMMM D');
 
   let innerContent = null;
   let title = '';
   const lesson = lessons[0];
 
   if (type === 'class' && lesson) {
-    innerContent = teacher;
-    title = lesson.title;
+    title = <Lesson {...lesson} />;
+    innerContent = <p>{teacher}</p>;
   }
 
   if (type === 'holiday') {
-    // innerContent = <Holiday {...classConfig} />;
-    title = 'Holiday!';
-    innerContent = notes;
+    innerContent = <p>{notes}</p>;
   }
 
-  if (type === 'flex') {
-    title = 'Flex day';
-    innerContent = notes;
+  if (['flex', 'party', 'assessment'].indexOf(type) >= 0) {
+    innerContent = (
+      <React.Fragment>
+        <p>{teacher}</p>
+        <p>{notes}</p>
+      </React.Fragment>
+    );
   }
 
   if (type === 'cancelled') {
-    // innerContent = <CancelledClass {...classConfig} />;
-    title = 'Cancelled - no class today!';
+    innerContent = <p>{notes}</p>;
   }
 
   return (
-    <LessonContainer>
-      <LessonDate>
-        {type} - {formatedDate} - {title}
-      </LessonDate>
-      {innerContent}
+    <LessonContainer type={type}>
+      <TopContainer>
+        <div>
+          {formatedDate}
+          {title}
+          {innerContent}
+        </div>
+        <TypeTag type={type}>{type}</TypeTag>
+      </TopContainer>
     </LessonContainer>
   );
 };

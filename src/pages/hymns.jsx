@@ -17,9 +17,10 @@ const HymnWrapper = emotion.div({
   borderBottom: '1px solid #ececec',
 });
 
-const HymnTitle = emotion.div(({theme, disabled}) => ({
+const HymnLink = emotion.a(({theme, disabled}) => ({
   color: disabled ? theme.colors.text.secondary : theme.colors.text.primary,
   padding: '8px 4px',
+  textDecoration: 'none',
 }));
 
 const Audio = emotion.audio({
@@ -50,11 +51,13 @@ class Hymn extends Component {
   };
 
   render() {
+    const {url, title, number, contentUrl} = this.props;
+
     let PlayButton = <Play className={unavailableClassName} size={14} />;
 
     const ActionButton = this.state.playing ? Stop : Play;
 
-    if (this.props.url) {
+    if (url) {
       PlayButton = (
         <ActionButton
           className={playClassName}
@@ -70,11 +73,11 @@ class Hymn extends Component {
       <OuterWrapper>
         <HymnWrapper>
           {PlayButton}
-          <HymnTitle disabled={!this.props.url}>
-            {this.props.number} - {this.props.title}
-          </HymnTitle>
+          <HymnLink href={contentUrl} target="_blank" disabled={!url}>
+            {number} - {title}
+          </HymnLink>
         </HymnWrapper>
-        {this.state.playing ? <Player url={this.props.url} /> : null}
+        {this.state.playing ? <Player url={url} /> : null}
       </OuterWrapper>
     );
   }

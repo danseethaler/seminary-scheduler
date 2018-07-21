@@ -6,6 +6,10 @@ $('table#playlist>tbody>tr').map((index, elem) => {
     .first()
     .text();
 
+  const contentUrl = $(elem)
+    .find('a.playlist-notrigger')
+    .attr('href');
+
   const number = parseInt(
     $(elem)
       .find(':nth-child(4)')
@@ -14,15 +18,21 @@ $('table#playlist>tbody>tr').map((index, elem) => {
     10
   );
 
-  const url = $(elem)
+  let url = $(elem)
     .find('a')
     .filter((i, elem) => elem.innerHTML.indexOf('>Music') > 0)
     .attr('href');
+
+  if (url) {
+    // Remove ?download=true
+    url = url.split('?').shift();
+  }
 
   hymns.push({
     title,
     number,
     url,
+    contentUrl,
   });
 });
 

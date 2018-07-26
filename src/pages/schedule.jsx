@@ -1,8 +1,9 @@
 import moment from 'moment';
+import DownChevron from 'react-icons/lib/io/chevron-down';
 import React, {Component} from 'react';
 import styled from 'react-emotion';
 import {Card, Title} from '../components/Bits';
-import {Lesson} from '../components/LessonCard';
+import {AssignmentSmall, Lesson, LessonDate} from '../components/LessonCard';
 import {typeColors} from '../constants';
 import {getSchedule} from '../services/schedule';
 
@@ -39,45 +40,59 @@ const TopContainer = styled.div({
   alignItems: 'flex-start',
 });
 
+const RightFlex = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  alignItems: 'flex-end',
+});
+
+const displayTwo = (teacher, notes) => {
+  if (!teacher) {
+    return notes || '';
+  }
+  if (!notes) {
+    return teacher || '';
+  }
+  if (!teacher && !notes) {
+    return '';
+  }
+  return teacher + ' - ' + notes;
+};
+
 const ScheduleDate = classConfig => {
-  const {date, devotional, lessons, teacher, type, notes} = classConfig;
+  const {
+    date,
+    devotional,
+    lessons,
+    teacher = '',
+    type,
+    notes = '',
+  } = classConfig;
   const formatedDate = moment(date).format('dddd, MMMM D');
 
-  let innerContent = null;
   let title = '';
   const lesson = lessons[0];
 
   if (type === 'class' && lesson) {
     title = <Lesson {...lesson} />;
-    innerContent = <p>{teacher}</p>;
-  }
-
-  if (type === 'holiday') {
-    innerContent = <p>{notes}</p>;
-  }
-
-  if (['flex', 'party', 'assessment'].indexOf(type) >= 0) {
-    innerContent = (
-      <React.Fragment>
-        <p>{teacher}</p>
-        <p>{notes}</p>
-      </React.Fragment>
-    );
-  }
-
-  if (type === 'cancelled') {
-    innerContent = <p>{notes}</p>;
   }
 
   return (
     <LessonContainer type={type}>
       <TopContainer>
         <div>
-          {formatedDate}
-          {title}
-          {innerContent}
+          <Title style={{fontSize: '1.1em', marginTop: 0}}>
+            {formatedDate}
+          </Title>
+          <AssignmentSmall customStyle={{margin: 0}}>
+            {displayTwo(teacher, notes)}
+          </AssignmentSmall>
         </div>
-        <TypeTag type={type}>{type}</TypeTag>
+        <RightFlex>
+          <TypeTag type={type}>{type}</TypeTag>
+          <DownChevron />
+        </RightFlex>
       </TopContainer>
     </LessonContainer>
   );

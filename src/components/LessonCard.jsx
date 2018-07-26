@@ -26,14 +26,17 @@ export const LessonTitle = styled.a(({theme, type = 'primary'}) => ({
   letterSpacing: '.1em',
 }));
 
-export const LessonDate = styled.h3(({theme, type = 'primary'}) => ({
-  color: theme.colors.text[type],
-  fontFamily: "'Lato', sans-serif",
-  fontWeight: 600,
-  fontSize: 16,
-  margin: '0 0 20px 0',
-  letterSpacing: '.1em',
-}));
+export const LessonDate = styled.h3(
+  ({theme, type = 'primary', customStyle}) => ({
+    color: theme.colors.text[type],
+    fontFamily: "'Lato', sans-serif",
+    fontWeight: 600,
+    fontSize: 16,
+    margin: '0 0 20px 0',
+    letterSpacing: '.1em',
+    ...customStyle,
+  })
+);
 
 export const Assignment = styled.h2(({theme, type = 'primary'}) => ({
   color: theme.colors.text.primary,
@@ -44,15 +47,18 @@ export const Assignment = styled.h2(({theme, type = 'primary'}) => ({
   marginBottom: 3,
 }));
 
-export const AssignmentSmall = styled.p(({theme, type = 'primary'}) => ({
-  textTransform: 'uppercase',
-  color: '#959ca5',
-  fontFamily: "'Roboto', sans-serif",
-  fontWeight: 400,
-  letterSpacing: '.1em',
-  fontSize: 12,
-  marginTop: 0,
-}));
+export const AssignmentSmall = styled.p(
+  ({theme, type = 'primary', customStyle}) => ({
+    textTransform: 'uppercase',
+    color: '#959ca5',
+    fontFamily: "'Roboto', sans-serif",
+    fontWeight: 400,
+    letterSpacing: '.1em',
+    fontSize: 12,
+    marginTop: 0,
+    ...customStyle,
+  })
+);
 
 export const ButtonText = styled.span(({theme, type = 'primary'}) => ({
   textTransform: 'uppercase',

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import Home from '../pages/Home';
-import Hymns from '../pages/Hymns';
+import Hymns from '../pages/hymns';
 import Info from '../pages/Info';
 import Schedule from '../pages/schedule';
 import {getInfoConfig} from '../services/schedule';

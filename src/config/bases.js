@@ -7,4 +7,8 @@ export default {
     baseKey: 'appysbcW8pdIZOrB4',
     title: 'Mebane',
   },
+  durham2: {
+    baseKey: 'apppZu8hhKRuNXtjv',
+    title: 'Durham 2nd',
+  },
 };

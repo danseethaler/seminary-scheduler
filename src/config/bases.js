@@ -4,7 +4,7 @@ export default {
     title: 'Hillsborough',
   },
   mebane: {
-    baseKey: 'appysbcW8pdIZOrB4',
+    baseKey: 'appk6rSz2FHRdZdoF',
     title: 'Mebane',
   },
   durham2: {

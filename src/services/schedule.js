@@ -89,7 +89,15 @@ export const matchDatesToLessons = ({students, teachers, dates}) => {
 
       const teacher = substitute || getTeacher(date, type, teachers);
 
-      return {date, type, teacher, devotional, lessons, ...rest};
+      return {
+        date,
+        type,
+        teacher,
+        week: moment(date).format('w'),
+        devotional,
+        lessons,
+        ...rest,
+      };
     }
   );
 };

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {withRouter} from 'react-router-dom';
 import {setupAirtable} from '../airtable';
 import bases from '../config/bases';
@@ -8,7 +8,7 @@ import {SelectBase} from './SelectBase';
 
 let currentBaseName = '';
 
-class BaseSelector extends Component {
+class BaseSelector extends React.Component {
   state = {loaded: false};
 
   componentDidMount() {

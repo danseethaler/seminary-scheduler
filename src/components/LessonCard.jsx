@@ -87,6 +87,14 @@ export const Lesson = ({title, lesson, url}) => {
   );
 };
 
+export const Devotional = ({devotional}) =>
+  devotional.map(({assignee, assignment}) => (
+    <React.Fragment key={assignment}>
+      <Assignment>{assignee}</Assignment>
+      <AssignmentSmall>{assignment}</AssignmentSmall>
+    </React.Fragment>
+  ));
+
 export default ({finished, date, devotional, lessons, teacher, type}) => {
   if (finished) return null;
 
@@ -96,14 +104,11 @@ export default ({finished, date, devotional, lessons, teacher, type}) => {
         <LessonDate>
           {moment(date).format('dddd, MMMM D')} - {teacher}
         </LessonDate>
-        {lessons.map(lesson => <Lesson key={lesson.lesson} {...lesson} />)}
-        <Hr style={{mariginTop: 10}} />
-        {devotional.map(({assignee, assignment}) => (
-          <React.Fragment key={assignment}>
-            <Assignment>{assignee}</Assignment>
-            <AssignmentSmall>{assignment}</AssignmentSmall>
-          </React.Fragment>
+        {lessons.map(lesson => (
+          <Lesson key={lesson.lesson} {...lesson} />
         ))}
+        <Hr style={{mariginTop: 10}} />
+        <Devotional devotional={devotional} />
       </CardContent>
     </Card>
   );

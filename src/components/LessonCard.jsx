@@ -1,4 +1,5 @@
 import moment from 'moment';
+import {TypeTag} from '../pages/schedule';
 import React from 'react';
 import styled from 'react-emotion';
 import {Card} from './Bits';
@@ -97,18 +98,20 @@ export const Devotional = ({devotional}) =>
 
 export default ({finished, date, devotional, lessons, teacher, type}) => {
   if (finished) return null;
-
   return (
     <Card>
       <CardContent>
         <LessonDate>
           {moment(date).format('dddd, MMMM D')} - {teacher}
+          <TypeTag style={{float: 'right'}} type={type}>
+            {type}
+          </TypeTag>
         </LessonDate>
-        {lessons.map(lesson => (
-          <Lesson key={lesson.lesson} {...lesson} />
-        ))}
+        {lessons.length > 0
+          ? lessons.map(lesson => <Lesson key={lesson.lesson} {...lesson} />)
+          : null}
         <Hr style={{mariginTop: 10}} />
-        <Devotional devotional={devotional} />
+        {devotional ? <Devotional devotional={devotional} /> : null}
       </CardContent>
     </Card>
   );

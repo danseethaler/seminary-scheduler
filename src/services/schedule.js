@@ -48,7 +48,7 @@ const setupLessons = (dates, lessons) => {
   return dateIndex => {
     if (!dates[dateIndex]) return null;
 
-    const {type, notes} = dates[dateIndex];
+    const {type} = dates[dateIndex];
 
     switch (type) {
       case 'class':
@@ -56,8 +56,6 @@ const setupLessons = (dates, lessons) => {
         return lessons[lessonIndex];
 
       case 'flex':
-        return {notes};
-
       case 'holiday':
       case 'cancelled':
       default:

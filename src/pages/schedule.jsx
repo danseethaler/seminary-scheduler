@@ -118,7 +118,7 @@ const LessonContainer = styled.div(({expandable}) => ({
   },
 }));
 
-const TypeTag = styled.span(({type}) => ({
+export const TypeTag = styled.span(({type}) => ({
   padding: '3px 7px',
   borderRadius: 10,
   backgroundColor: typeColors[type],

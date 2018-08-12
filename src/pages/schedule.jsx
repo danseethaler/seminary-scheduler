@@ -7,7 +7,6 @@ import {Card, Title} from '../components/Bits';
 import {
   AssignmentSmall,
   Devotional,
-  Lesson,
   LessonTitle,
 } from '../components/LessonCard';
 import theme from '../config/theme';
@@ -120,7 +119,6 @@ const ScheduleDate = classConfig => {
   const {
     date,
     devotional,
-    lessons,
     teacher = '',
     type,
     notes = '',
@@ -129,13 +127,6 @@ const ScheduleDate = classConfig => {
     expandable,
   } = classConfig;
   const formatedDate = moment(date).format('dddd, MMMM D');
-
-  let title = '';
-  const lesson = lessons[0];
-
-  if (type === 'class' && lesson) {
-    title = <Lesson {...lesson} />;
-  }
 
   return (
     <LessonContainer

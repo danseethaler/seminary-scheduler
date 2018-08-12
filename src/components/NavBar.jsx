@@ -13,6 +13,9 @@ const Container = emotion.div({
   left: 0,
   right: 0,
   backgroundColor: '#fff',
+  '@media print': {
+    display: 'none',
+  },
 });
 
 const Spacer = emotion.div({

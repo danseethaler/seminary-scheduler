@@ -154,7 +154,7 @@ const ScheduleDate = classConfig => {
               style={
                 expanded
                   ? {transition: 'all 200ms ease', transform: 'rotate(-180deg)'}
-                  : null
+                  : {transition: 'all 200ms ease', transform: 'rotate(0deg)'}
               }
               color={theme.colors.background.shadow}
             />

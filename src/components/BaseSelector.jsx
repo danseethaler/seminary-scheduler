@@ -1,23 +1,10 @@
 import React, {Component} from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import {setupAirtable} from '../airtable';
 import bases from '../config/bases';
 import setupSchedule from '../services/schedule';
 import Container from './Container';
-
-const SelectBase = () => (
-  <div>
-    {Object.keys(bases).map(base => {
-      const {baseKey, title} = bases[base];
-
-      return (
-        <div key={baseKey}>
-          <Link to={`/${base}`}>{title}</Link>
-        </div>
-      );
-    })}
-  </div>
-);
+import {SelectBase} from './SelectBase';
 
 let currentBaseName = '';
 

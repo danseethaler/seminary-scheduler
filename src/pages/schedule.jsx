@@ -17,6 +17,25 @@ const WeekContainer = styled.div(({on}) => ({
   borderLeft: `3px solid ${on ? '#e5d1e6' : '#abd9e4'}`,
 }));
 
+const ExpandablesContainer = styled.div({
+  display: 'flex',
+  // justifyContent: 'flex-end',
+});
+
+const ExpandButton = styled.button({
+  backgroundColor: '#acd9e3',
+  borderRadius: '3em',
+  padding: '1em 2em',
+  border: 'none',
+  margin: '0 0 5px 5px',
+  cursor: 'pointer',
+  outline: 0,
+  color: 'white',
+  ':hover': {
+    backgroundColor: '#8bb9c3',
+  },
+});
+
 class Schedule extends React.Component {
   state = {
     expandedDates: [],
@@ -32,12 +51,28 @@ class Schedule extends React.Component {
     }
   };
 
+  expandToggle = on => {
+    if (on) {
+      this.setState({expandedDates: getSchedule().map(({date}) => date)});
+    } else {
+      this.setState({expandedDates: []});
+    }
+  };
+
   render() {
     const scheduleWeeks = groupBy(getSchedule(), 'week');
     let on = false;
     return (
       <React.Fragment>
         <Title>Schedule</Title>
+        <ExpandablesContainer>
+          <ExpandButton onClick={() => this.expandToggle(true)}>
+            Expand All
+          </ExpandButton>
+          <ExpandButton onClick={() => this.expandToggle(false)}>
+            Collapse All
+          </ExpandButton>
+        </ExpandablesContainer>
         <Card style={{marginBottom: 70}}>
           {map(scheduleWeeks, (week, weekKey) => {
             on = !on; // Toggle on
@@ -153,7 +188,10 @@ const ScheduleDate = classConfig => {
             <UpChevron
               style={
                 expanded
-                  ? {transition: 'all 200ms ease', transform: 'rotate(-180deg)'}
+                  ? {
+                      transition: 'all 200ms ease',
+                      transform: 'rotate(-180deg)',
+                    }
                   : {transition: 'all 200ms ease', transform: 'rotate(0deg)'}
               }
               color={theme.colors.background.shadow}

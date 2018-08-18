@@ -8,7 +8,8 @@ import {Card, Title} from '../components/Bits';
 import {
   AssignmentSmall,
   Devotional,
-  LessonTitle,
+  Hr,
+  Lesson,
 } from '../components/LessonCard';
 import theme from '../config/theme';
 import {typeColors, typesWithClass} from '../constants';
@@ -172,6 +173,7 @@ const ScheduleDate = classConfig => {
     expanded = false,
     toggleExpanded,
     expandable,
+    lessons,
   } = classConfig;
   const formatedDate = moment(date).format('dddd, MMMM D');
 
@@ -213,9 +215,12 @@ const ScheduleDate = classConfig => {
       </TopContainer>
       <Accordion expanded={expanded}>
         <DetailContainer>
+          {lessons.length > 0
+            ? lessons.map(lesson => <Lesson key={lesson.lesson} {...lesson} />)
+            : null}
           {devotional ? (
             <React.Fragment>
-              <LessonTitle>Devotional</LessonTitle>
+              <Hr margin="5px 0" />
               <Devotional devotional={devotional} />
             </React.Fragment>
           ) : null}

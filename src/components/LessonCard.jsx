@@ -71,17 +71,25 @@ export const ButtonText = styled.span(({theme, type = 'primary'}) => ({
   opacity: 0.7,
 }));
 
-export const Hr = styled.div(({theme, type = 'primary'}) => ({
-  width: 'calc(100% - 20px)',
-  margin: '20px 0',
-  borderBottom: `1px solid rgba(226, 226, 226, 0.6)`,
-}));
+export const Hr = styled.div(
+  ({theme, type = 'primary', margin = '20px 0'}) => ({
+    width: 'calc(100% - 20px)',
+    margin,
+    borderBottom: `1px solid rgba(226, 226, 226, 0.6)`,
+  })
+);
 
 export const Lesson = ({title, lesson, url}) => {
   return (
     <React.Fragment>
       <LessonNumber>Lesson {lesson}</LessonNumber>
-      <LessonTitle target="_blank" href={url}>
+      <LessonTitle
+        target="_blank"
+        href={url}
+        onClick={e => {
+          e.stopPropagation();
+        }}
+      >
         {title}
       </LessonTitle>
     </React.Fragment>

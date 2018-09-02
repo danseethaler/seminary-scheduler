@@ -1,6 +1,6 @@
 import moment from 'moment';
 import {getAllData} from '../airtable';
-import {typesWithNoClass, tables} from '../constants';
+import {typesWithNoClass, tables, typesWithClass} from '../constants';
 import dac from '../data/dac';
 import assignment from './assignment';
 
@@ -232,6 +232,7 @@ export const getNextClass = () => {
   const today = moment().startOf('day');
   const nextClass = schedule
     .sort(sortBy('date'))
+    .filter(({type}) => typesWithClass.indexOf(type) >= 0)
     .find(({date}) => moment(date).diff(today, 'days') >= 0);
 
   if (!nextClass) {

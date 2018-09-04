@@ -1,10 +1,11 @@
 import {ThemeProvider} from 'emotion-theming';
 import React from 'react';
 import styled from 'react-emotion';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import BaseSelector from './components/BaseSelector';
 import theme from './config/theme';
+import Reader from './pages/Reader';
 
 const Wrapper = styled.div(({theme}) => ({
   margin: 'auto',
@@ -26,12 +27,19 @@ const Circle = styled.div(({theme}) => ({
 }));
 
 export default () => (
-  <Wrapper>
-    <Circle />
-    <Router>
-      <ThemeProvider theme={theme}>
-        <BaseSelector />
-      </ThemeProvider>
-    </Router>
-  </Wrapper>
+  <Router>
+    <ThemeProvider theme={theme}>
+      <Switch>
+        <Route exact path="/reader" component={Reader} />
+        <Route
+          render={() => (
+            <Wrapper>
+              <Circle />
+              <BaseSelector />
+            </Wrapper>
+          )}
+        />
+      </Switch>
+    </ThemeProvider>
+  </Router>
 );

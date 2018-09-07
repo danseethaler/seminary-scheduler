@@ -33,8 +33,10 @@ class Reader extends Component {
     const pastedQuote = clipboardData.getData('Text');
 
     if (pastedQuote) {
+      const lastQuoteIndexAfterPaste = this.state.quotes.length;
+
       this.setState({
-        quoteIndex: this.state.quoteIndex + 1,
+        quoteIndex: lastQuoteIndexAfterPaste,
         quotes: [
           ...this.state.quotes,
           pastedQuote.replace(/\n/g, '<div style="margin-top: 0.5em;" />'),

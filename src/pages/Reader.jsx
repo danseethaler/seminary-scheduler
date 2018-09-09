@@ -1,10 +1,25 @@
+import {IoMdArrowDown} from 'react-icons/io';
 import React, {Component} from 'react';
 import emotion from 'react-emotion';
+import theme from '../config/theme';
 
 const OuterWrapper = emotion.div({
   padding: 80,
   fontSize: '4em',
   color: '#4e545e',
+});
+
+const AppendModeContainer = emotion.span({
+  position: 'fixed',
+  right: 12,
+  bottom: 12,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  border: 'none',
+  padding: 10,
+  backgroundColor: theme.colors.background.shadow,
+  borderRadius: 30,
 });
 
 const Img = emotion.img({
@@ -18,6 +33,12 @@ const Img = emotion.img({
   margin: 'auto',
   overflow: 'auto',
 });
+
+const AppendModeIndicator = () => (
+  <AppendModeContainer>
+    <IoMdArrowDown size={32} color="#FFFFFF" />
+  </AppendModeContainer>
+);
 
 class Reader extends Component {
   state = {
@@ -48,47 +69,68 @@ class Reader extends Component {
     if (pastedQuote) {
       const isImage = pastedQuote.match(urlRegex);
       const type = isImage ? 'image' : 'text';
-      const text = isImage
-        ? pastedQuote
-        : pastedQuote.replace(/\n/g, '<div style="margin-top: 0.5em;" />');
+      const text = pastedQuote;
       const lastQuoteIndexAfterPaste = this.state.quotes.length;
+      const currentQuote = this.state.quotes[this.state.quoteIndex];
 
       const newQuote = {type, text};
 
-      this.setState({
-        quoteIndex: lastQuoteIndexAfterPaste,
-        quotes: [...this.state.quotes, newQuote],
-      });
+      if (
+        type === 'text' &&
+        this.state.appendMode &&
+        currentQuote.type === 'text'
+      ) {
+        this.setState({
+          quotes: this.state.quotes.map((quote, index) => {
+            if (index === this.state.quoteIndex) {
+              return {
+                type: 'text',
+                text: quote.text + '\n\n' + text,
+              };
+            }
+            return quote;
+          }),
+        });
+      } else {
+        this.setState({
+          quoteIndex: lastQuoteIndexAfterPaste,
+          quotes: [...this.state.quotes, newQuote],
+        });
+      }
     }
   };
 
   handleArrow = e => {
-    // Left arrow
-    if (e.keyCode === 37) {
-      if (this.state.quoteIndex > 0) {
-        this.setState({quoteIndex: this.state.quoteIndex - 1});
-
-        e.stopPropagation();
-        e.preventDefault();
-      }
+    if ([37, 38, 39, 40].indexOf(e.keyCode) === -1) {
+      return;
     }
 
-    // Right arrow
-    if (e.keyCode === 39) {
-      if (this.state.quoteIndex < this.state.quotes.length - 1) {
-        this.setState({quoteIndex: this.state.quoteIndex + 1});
+    e.stopPropagation();
+    e.preventDefault();
 
-        e.stopPropagation();
-        e.preventDefault();
-      }
-    }
+    switch (e.keyCode) {
+      case 37: // Left arrow
+        if (this.state.quoteIndex > 0) {
+          this.setState({quoteIndex: this.state.quoteIndex - 1});
+        }
+        break;
 
-    // Up/down arrow
-    if (e.keyCode === 38 || e.keyCode === 40) {
-      this.setState({quoteIndex: this.state.quotes.length - 1});
+      case 39: // Right arrow
+        if (this.state.quoteIndex < this.state.quotes.length - 1) {
+          this.setState({quoteIndex: this.state.quoteIndex + 1});
+        }
+        break;
 
-      e.stopPropagation();
-      e.preventDefault();
+      case 38: // Up arrow
+        this.setState({quoteIndex: this.state.quotes.length - 1});
+        break;
+
+      case 40: // Down arrow
+        const currentQuote = this.state.quotes[this.state.quoteIndex];
+        if (currentQuote && currentQuote.type === 'text') {
+          this.setState({appendMode: !this.state.appendMode});
+        }
+        break;
     }
   };
 
@@ -112,10 +154,18 @@ class Reader extends Component {
     }
 
     return (
-      <OuterWrapper
-        id="reader_container"
-        dangerouslySetInnerHTML={{__html: text}}
-      />
+      <React.Fragment>
+        <OuterWrapper
+          id="reader_container"
+          dangerouslySetInnerHTML={{
+            __html: text.replace(
+              /\n/g,
+              '<div style="margin-top: 0.5em;"></div>'
+            ),
+          }}
+        />
+        {this.state.appendMode && <AppendModeIndicator />}
+      </React.Fragment>
     );
   }
 }

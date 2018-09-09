@@ -2,7 +2,7 @@ import {map} from 'lodash';
 import moment from 'moment';
 import React from 'react';
 import styled from 'react-emotion';
-import UpChevron from 'react-icons/lib/io/chevron-up';
+import {IoIosArrowUp} from 'react-icons/io';
 import Accordion from '../components/Accordion';
 import {Card, Title} from '../components/Bits';
 import {
@@ -199,7 +199,7 @@ const ScheduleDate = classConfig => {
         <RightFlex>
           <TypeTag type={type}>{type}</TypeTag>
           {expandable ? (
-            <UpChevron
+            <IoIosArrowUp
               style={
                 expanded
                   ? {

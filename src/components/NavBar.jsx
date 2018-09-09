@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import emotion, {css} from 'react-emotion';
-import Bookmark from 'react-icons/lib/io/android-bookmark';
-import Calendar from 'react-icons/lib/io/android-calendar';
-import Info from 'react-icons/lib/io/informatcircled';
-import Music from 'react-icons/lib/io/music-note';
+import {IoIosBookmark} from 'react-icons/io';
+import {IoIosCalendar} from 'react-icons/io';
+import {IoIosInformationCircle} from 'react-icons/io';
+import {IoIosMusicalNotes} from 'react-icons/io';
 import {withRouter} from 'react-router-dom';
 
 const Container = emotion.div({
@@ -36,19 +36,19 @@ const iconClassName = active =>
 
 const icons = [
   {
-    Icon: Bookmark,
+    Icon: IoIosBookmark,
     path: '',
   },
   {
-    Icon: Music,
+    Icon: IoIosMusicalNotes,
     path: '/hymns',
   },
   {
-    Icon: Calendar,
+    Icon: IoIosCalendar,
     path: '/schedule',
   },
   {
-    Icon: Info,
+    Icon: IoIosInformationCircle,
     path: '/info',
   },
 ];

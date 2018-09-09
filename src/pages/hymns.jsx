@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import emotion, {css} from 'react-emotion';
-import Play from 'react-icons/lib/io/play';
-import Stop from 'react-icons/lib/io/stop';
+import {IoIosPlay, IoIosSquare} from 'react-icons/io';
 import {Card, Title} from '../components/Bits';
 import hymns from '../data/hymns';
 
@@ -53,9 +52,9 @@ class Hymn extends Component {
   render() {
     const {url, title, number, contentUrl} = this.props;
 
-    let PlayButton = <Play className={unavailableClassName} size={14} />;
+    let PlayButton = <IoIosPlay className={unavailableClassName} size={14} />;
 
-    const ActionButton = this.state.playing ? Stop : Play;
+    const ActionButton = this.state.playing ? IoIosSquare : IoIosPlay;
 
     if (url) {
       PlayButton = (
@@ -89,7 +88,9 @@ class Hymns extends Component {
       <React.Fragment>
         <Title>Hymns</Title>
         <Card style={{marginBottom: 70}}>
-          {hymns.map(hymn => <Hymn key={hymn.number} {...hymn} />)}
+          {hymns.map(hymn => (
+            <Hymn key={hymn.number} {...hymn} />
+          ))}
         </Card>
       </React.Fragment>
     );

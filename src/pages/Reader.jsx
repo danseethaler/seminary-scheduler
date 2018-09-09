@@ -2,11 +2,21 @@ import React, {Component} from 'react';
 import emotion from 'react-emotion';
 
 const OuterWrapper = emotion.div({
-  display: 'flex',
-  flexDirection: 'column',
   padding: 80,
   fontSize: '4em',
   color: '#4e545e',
+});
+
+const Img = emotion.img({
+  position: 'fixed',
+  top: '0',
+  bottom: '0',
+  left: '0',
+  right: '0',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  margin: 'auto',
+  overflow: 'auto',
 });
 
 class Reader extends Component {
@@ -32,15 +42,22 @@ class Reader extends Component {
     const clipboardData = e.clipboardData || window.clipboardData;
     const pastedQuote = clipboardData.getData('Text');
 
+    var urlExpression = /[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_+.~#?&//=]*)?/gi;
+    var urlRegex = new RegExp(urlExpression);
+
     if (pastedQuote) {
+      const isImage = pastedQuote.match(urlRegex);
+      const type = isImage ? 'image' : 'text';
+      const text = isImage
+        ? pastedQuote
+        : pastedQuote.replace(/\n/g, '<div style="margin-top: 0.5em;" />');
       const lastQuoteIndexAfterPaste = this.state.quotes.length;
+
+      const newQuote = {type, text};
 
       this.setState({
         quoteIndex: lastQuoteIndexAfterPaste,
-        quotes: [
-          ...this.state.quotes,
-          pastedQuote.replace(/\n/g, '<div style="margin-top: 0.5em;" />'),
-        ],
+        quotes: [...this.state.quotes, newQuote],
       });
     }
   };
@@ -76,9 +93,9 @@ class Reader extends Component {
   };
 
   render() {
-    const quote = this.state.quotes[this.state.quoteIndex] || '';
+    const {type, text} = this.state.quotes[this.state.quoteIndex] || '';
 
-    if (!quote) {
+    if (!text) {
       return (
         <OuterWrapper id="reader_container" style={{color: 'gray'}}>
           Paste to begin
@@ -86,10 +103,18 @@ class Reader extends Component {
       );
     }
 
+    if (type === 'image') {
+      return (
+        <OuterWrapper id="reader_container" style={{color: 'gray'}}>
+          <Img src={text} />
+        </OuterWrapper>
+      );
+    }
+
     return (
       <OuterWrapper
         id="reader_container"
-        dangerouslySetInnerHTML={{__html: quote}}
+        dangerouslySetInnerHTML={{__html: text}}
       />
     );
   }

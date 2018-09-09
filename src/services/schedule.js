@@ -1,4 +1,5 @@
 import moment from 'moment';
+import {cloneDeep} from 'lodash';
 import {getAllData} from '../airtable';
 import {typesWithNoClass, tables, typesWithClass} from '../constants';
 import dac from '../data/dac';
@@ -160,7 +161,10 @@ export const setupInfoConfig = (dates, classList, fullSchedule) => {
 const getLocalStorageName = baseName => `semimary_data_${baseName}`;
 
 let schedule;
+let students;
 let infoConfig;
+
+export const getStudents = () => cloneDeep(students);
 
 export default (baseName, callback) => {
   // Setup schedule from local
@@ -179,6 +183,9 @@ export default (baseName, callback) => {
     .then(data => {
       // Replace outer scope schedule
       schedule = matchDatesToLessons(data);
+
+      // Replace outer scope students
+      students = data.students;
 
       // Replace outer scope infoConfig
       infoConfig = setupInfoConfig(data.dates, dac, schedule);

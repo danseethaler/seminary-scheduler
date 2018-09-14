@@ -101,7 +101,7 @@ class Reader extends Component {
   };
 
   handleArrow = e => {
-    if ([37, 38, 39, 40].indexOf(e.keyCode) === -1) {
+    if ([37, 38, 39, 40, 68].indexOf(e.keyCode) === -1) {
       return;
     }
 
@@ -109,6 +109,20 @@ class Reader extends Component {
     e.preventDefault();
 
     switch (e.keyCode) {
+      case 68: // d key -> delete current slide
+        if (this.state.quotes.length) {
+          const quotes = this.state.quotes.filter(
+            (quote, index) => index !== this.state.quoteIndex
+          );
+          let {quoteIndex} = this.state;
+          if (!quotes[this.state.quoteIndex]) {
+            quoteIndex = this.state.quoteIndex - 1;
+          }
+
+          this.setState({quotes, quoteIndex});
+        }
+        break;
+
       case 37: // Left arrow
         if (this.state.quoteIndex > 0) {
           this.setState({quoteIndex: this.state.quoteIndex - 1});

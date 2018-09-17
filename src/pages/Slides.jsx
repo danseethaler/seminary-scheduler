@@ -40,7 +40,7 @@ const AppendModeIndicator = () => (
   </AppendModeContainer>
 );
 
-class Reader extends Component {
+class Slides extends Component {
   state = {
     quoteIndex: -1,
     quotes: [],
@@ -78,6 +78,7 @@ class Reader extends Component {
       if (
         type === 'text' &&
         this.state.appendMode &&
+        currentQuote &&
         currentQuote.type === 'text'
       ) {
         this.setState({
@@ -153,7 +154,7 @@ class Reader extends Component {
 
     if (!text) {
       return (
-        <OuterWrapper id="reader_container" style={{color: 'gray'}}>
+        <OuterWrapper id="slides_container" style={{color: 'gray'}}>
           Paste to begin
         </OuterWrapper>
       );
@@ -161,7 +162,7 @@ class Reader extends Component {
 
     if (type === 'image') {
       return (
-        <OuterWrapper id="reader_container" style={{color: 'gray'}}>
+        <OuterWrapper id="slides_container" style={{color: 'gray'}}>
           <Img src={text} />
         </OuterWrapper>
       );
@@ -170,7 +171,7 @@ class Reader extends Component {
     return (
       <React.Fragment>
         <OuterWrapper
-          id="reader_container"
+          id="slides_container"
           dangerouslySetInnerHTML={{
             __html: text.replace(
               /\n/g,
@@ -184,4 +185,4 @@ class Reader extends Component {
   }
 }
 
-export default Reader;
+export default Slides;

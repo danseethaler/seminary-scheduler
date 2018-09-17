@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import BaseSelector from './components/BaseSelector';
 import theme from './config/theme';
-import Reader from './pages/Reader';
+import Slides from './pages/Slides';
 
 const Wrapper = styled.div(({theme}) => ({
   margin: 'auto',
@@ -30,7 +30,7 @@ export default () => (
   <Router>
     <ThemeProvider theme={theme}>
       <Switch>
-        <Route exact path="/reader" component={Reader} />
+        <Route exact path="/slides" component={Slides} />
         <Route
           render={() => (
             <Wrapper>

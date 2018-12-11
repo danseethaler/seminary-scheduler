@@ -7,6 +7,7 @@ const OuterWrapper = emotion.div({
   padding: 80,
   fontSize: '4em',
   color: '#4e545e',
+  marginBottom: '4em',
 });
 
 const AppendModeContainer = emotion.span({

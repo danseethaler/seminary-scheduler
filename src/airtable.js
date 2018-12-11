@@ -1,4 +1,5 @@
 import Airtable from 'airtable';
+import {debounce} from 'lodash';
 import moment from 'moment';
 import bases from './config/bases';
 
@@ -12,6 +13,22 @@ let base;
 export const setupAirtable = baseName => {
   base = Airtable.base(bases[baseName].baseKey);
 };
+
+export const setTwoDeepVolunteer = debounce((rowId, name) => {
+  base('dates').update(
+    rowId,
+    {
+      twoDeep: name,
+    },
+    (err, record) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log(record.get('twoDeep'));
+    }
+  );
+}, 200);
 
 // Takes a table name and an array of records to insert
 // return a promise that resolves when complete

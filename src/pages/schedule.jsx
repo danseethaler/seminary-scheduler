@@ -3,6 +3,7 @@ import moment from 'moment';
 import React from 'react';
 import styled from 'react-emotion';
 import {IoIosArrowUp} from 'react-icons/io';
+import {setTwoDeepVolunteer} from '../airtable';
 import Accordion from '../components/Accordion';
 import {Card, Title} from '../components/Bits';
 import {
@@ -75,6 +76,7 @@ class Schedule extends React.Component {
   render() {
     const scheduleWeeks = groupBy(getSchedule(), 'week');
     let on = false;
+
     return (
       <React.Fragment>
         <Title>Schedule</Title>
@@ -163,6 +165,49 @@ const displayTwo = (teacher, notes) => {
   return teacher + ' - ' + notes;
 };
 
+const LinkButton = styled.button({
+  border: 'none',
+  backgroundColor: 'none',
+});
+
+const Input = styled.input({
+  border: '1px solid #cccccc',
+  borderRadius: 3,
+  padding: 4,
+  '::placeholder': {
+    fontSize: '0.9em',
+    textTransform: 'lowercase',
+    color: '#a6a6a6',
+  },
+});
+
+class TwoDeep extends React.Component<{volunteer: string}> {
+  state = {volunteer: this.props.volunteer || ''};
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.volunteer && newProps.volunteer !== this.state.volunteer) {
+      this.setState({volunteer: newProps.volunteer});
+    }
+  }
+
+  render() {
+    const {rowId} = this.props;
+
+    return (
+      <Input
+        type="text"
+        placeholder="Two Deep Volunteer"
+        onClick={e => e.stopPropagation()}
+        value={this.state.volunteer}
+        onChange={e => {
+          this.setState({volunteer: e.target.value});
+          setTwoDeepVolunteer(rowId, e.target.value);
+        }}
+      />
+    );
+  }
+}
+
 const ScheduleDate = classConfig => {
   const {
     date,
@@ -170,12 +215,14 @@ const ScheduleDate = classConfig => {
     teacher = '',
     type,
     notes = '',
+    twoDeep,
     expanded = false,
     toggleExpanded,
     expandable,
     lessons,
   } = classConfig;
   const formatedDate = moment(date).format('dddd, MMMM D');
+  const needsVolunteer = typesWithClass.indexOf(type) >= 0;
 
   return (
     <LessonContainer
@@ -192,9 +239,12 @@ const ScheduleDate = classConfig => {
           <Title style={{fontSize: '1.1em', marginTop: 0}}>
             {formatedDate}
           </Title>
-          <AssignmentSmall customStyle={{margin: 0}}>
+          <AssignmentSmall customStyle={{marginBottom: 12}}>
             {displayTwo(teacher, notes)}
           </AssignmentSmall>
+          {needsVolunteer && (
+            <TwoDeep rowId={classConfig.id} volunteer={twoDeep} />
+          )}
         </div>
         <RightFlex>
           <TypeTag type={type}>{type}</TypeTag>

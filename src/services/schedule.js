@@ -71,34 +71,41 @@ export const matchDatesToLessons = ({students, teachers, dates}) => {
   const getNextDevotional = assignment(assignments, students);
   const getLesson = setupLessons(dates, dac);
 
-  return dates.map(
-    ({date, type, substitute, teacher_swap, lessonCount = 1, ...rest}, i) => {
-      const devotional = typesWithNoClass.includes(type)
-        ? null
-        : getNextDevotional();
+  return dates.map((dateItem, i) => {
+    const {
+      date,
+      type,
+      substitute,
+      teacher_swap,
+      lessonCount = 1,
+      ...rest
+    } = dateItem;
 
-      const lessons = [];
-      for (let index = 0; index < lessonCount; index++) {
-        const lesson = getLesson(i);
-        if (lesson) lessons.push(lesson);
-      }
+    const devotional = typesWithNoClass.includes(type)
+      ? null
+      : getNextDevotional();
 
-      // Move the current teacher to end of the array
-      if (teacher_swap) teachers.push(teachers.shift());
-
-      const teacher = substitute || getTeacher(date, type, teachers);
-
-      return {
-        date,
-        type,
-        teacher,
-        week: moment(date).format('w'),
-        devotional,
-        lessons,
-        ...rest,
-      };
+    const lessons = [];
+    for (let index = 0; index < lessonCount; index++) {
+      const lesson = getLesson(i);
+      if (lesson) lessons.push(lesson);
     }
-  );
+
+    // Move the current teacher to end of the array
+    if (teacher_swap) teachers.push(teachers.shift());
+
+    const teacher = substitute || getTeacher(date, type, teachers);
+
+    return {
+      date,
+      type,
+      teacher,
+      week: moment(date).format('w'),
+      devotional,
+      lessons,
+      ...rest,
+    };
+  });
 };
 
 export const setupInfoConfig = (dates, classList, fullSchedule) => {

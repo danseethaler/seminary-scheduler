@@ -14,7 +14,7 @@ import {
 } from '../components/LessonCard';
 import theme from '../config/theme';
 import {typeColors, typesWithClass} from '../constants';
-import {getSchedule} from '../services/schedule';
+import {getNextClass, getSchedule} from '../services/schedule';
 
 const WeekContainer = styled.div(({on}) => ({
   borderLeft: `3px solid ${on ? '#e5d1e6' : '#abd9e4'}`,
@@ -55,6 +55,15 @@ class Schedule extends React.Component {
     expandedDates: [],
   };
 
+  componentDidMount() {
+    setTimeout(() => {
+      const nextClass = document.getElementById('next-class');
+      if (nextClass) {
+        window.scrollTo(0, nextClass.offsetTop, {behavior: 'smooth'});
+      }
+    }, 200);
+  }
+
   toggleExpandedDate = id => {
     if (this.state.expandedDates.some(date => date === id)) {
       this.setState({
@@ -76,6 +85,7 @@ class Schedule extends React.Component {
   render() {
     const scheduleWeeks = groupBy(getSchedule(), 'week');
     let on = false;
+    const nextClassDate = getNextClass().date;
 
     return (
       <React.Fragment>
@@ -96,6 +106,7 @@ class Schedule extends React.Component {
                 {map(week, date => (
                   <ScheduleDate
                     key={date.date}
+                    nextClass={date.date === nextClassDate}
                     toggleExpanded={this.toggleExpandedDate}
                     expanded={this.state.expandedDates.some(
                       id => date.date === id
@@ -220,12 +231,14 @@ const ScheduleDate = classConfig => {
     toggleExpanded,
     expandable,
     lessons,
+    nextClass,
   } = classConfig;
   const formatedDate = moment(date).format('dddd, MMMM D');
   const needsVolunteer = typesWithClass.indexOf(type) >= 0;
 
   return (
     <LessonContainer
+      id={nextClass ? 'next-class' : null}
       expandable={expandable}
       onClick={() => {
         if (expandable) {

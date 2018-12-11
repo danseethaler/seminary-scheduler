@@ -193,11 +193,14 @@ const Input = styled.input({
 });
 
 class TwoDeep extends React.Component<{volunteer: string}> {
-  state = {volunteer: this.props.volunteer || ''};
+  state = {
+    volunteer: this.props.volunteer || '',
+    updated: false,
+  };
 
   componentWillReceiveProps(newProps) {
-    if (newProps.volunteer && newProps.volunteer !== this.state.volunteer) {
-      this.setState({volunteer: newProps.volunteer});
+    if (!this.state.updated && newProps.volunteer !== this.state.volunteer) {
+      this.setState({volunteer: newProps.volunteer || ''});
     }
   }
 
@@ -211,7 +214,10 @@ class TwoDeep extends React.Component<{volunteer: string}> {
         onClick={e => e.stopPropagation()}
         value={this.state.volunteer}
         onChange={e => {
-          this.setState({volunteer: e.target.value});
+          this.setState({
+            volunteer: e.target.value,
+            updated: true,
+          });
           setTwoDeepVolunteer(rowId, e.target.value);
         }}
       />
